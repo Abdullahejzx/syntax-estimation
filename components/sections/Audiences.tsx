@@ -9,17 +9,26 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
+type AudiencesProps = {
+  eyebrow?: string;
+  eyebrowStyle?: "text" | "chip";
+  title?: string;
+  intro?: string;
+  tone?: "white" | "mist";
+};
+
 /** "Tailored to your role" cards for GCs, subcontractors and suppliers. */
-export function Audiences() {
+export function Audiences({
+  eyebrow = "Who we serve",
+  eyebrowStyle,
+  title = "Tailored to Your Role in the Build",
+  intro = "A GC, a drywall sub and a lumber yard need very different outputs. We set up every takeoff to fit how you price and build.",
+  tone = "mist",
+}: AudiencesProps) {
   return (
-    <Section tone="mist" labelledBy="audiences-title">
+    <Section tone={tone} labelledBy="audiences-title">
       <Container>
-        <SectionHeading
-          id="audiences-title"
-          eyebrow="Who we serve"
-          title="Tailored to Your Role in the Build"
-          intro="A GC, a drywall sub and a lumber yard need very different outputs. We set up every takeoff to fit how you price and build."
-        />
+        <SectionHeading id="audiences-title" eyebrow={eyebrow} eyebrowStyle={eyebrowStyle} title={title} intro={intro} />
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8">
           {audiences.map((a, i) => (
             <Reveal key={a.title} delay={i * 0.08}>

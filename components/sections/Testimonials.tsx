@@ -1,10 +1,9 @@
 import { Quote, Star } from "lucide-react";
+import type { Testimonial } from "@/content/proof";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SwipeItem, SwipeRow } from "@/components/ui/SwipeRow";
-
-type Testimonial = { quote: string; name: string; role: string; location: string };
 
 type TestimonialsProps = {
   items: Testimonial[];

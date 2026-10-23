@@ -1,7 +1,6 @@
+import type { Stat } from "@/content/proof";
 import { CountUp } from "@/components/motion/CountUp";
 import { Container } from "@/components/ui/Container";
-
-type Stat = { value: number; label: string; prefix?: string; suffix?: string; decimals?: number };
 
 /** Navy band of big counting numbers. 2 columns on phones, 4 on desktop. */
 export function StatsBand({ stats, label = "Syntax Estimation by the numbers" }: { stats: Stat[]; label?: string }) {

@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 type FaqSectionProps = {
   items: AccordionItem[];
   eyebrow?: string;
+  eyebrowStyle?: "text" | "chip";
   title?: string;
   tone?: "white" | "mist";
   id?: string;
@@ -17,6 +18,7 @@ type FaqSectionProps = {
 export function FaqSection({
   items,
   eyebrow = "Common questions",
+  eyebrowStyle,
   title = "Frequently Asked Questions",
   tone = "mist",
   id = "faq",
@@ -25,7 +27,7 @@ export function FaqSection({
     <Section id={id} tone={tone} labelledBy={`${id}-title`}>
       <JsonLd data={faqSchema(items)} />
       <Container size="narrow">
-        <SectionHeading id={`${id}-title`} eyebrow={eyebrow} title={title} />
+        <SectionHeading id={`${id}-title`} eyebrow={eyebrow} eyebrowStyle={eyebrowStyle} title={title} />
         <Accordion items={items} />
       </Container>
     </Section>

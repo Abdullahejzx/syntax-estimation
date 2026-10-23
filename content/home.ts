@@ -18,14 +18,15 @@ import {
   Users,
 } from "lucide-react";
 import type { AccordionItem } from "@/components/ui/Accordion";
+import { formatStat, stats } from "./proof";
 
 // ---------------------------------------------------------------------------
 // Hero
 // ---------------------------------------------------------------------------
 
-// TODO: placeholder stats from the design. Replace with real numbers before launch.
+// TODO: placeholder stats. The first one comes from content/proof.ts so it always matches the stats band.
 export const heroStats = [
-  { value: "3,850+", label: "Projects estimated", highlight: false },
+  { value: formatStat(stats[0]), label: stats[0].label, highlight: false },
   { value: "24–72 hr", label: "Turnaround", highlight: true },
   { value: "All 50", label: "US states covered", highlight: false },
 ];
@@ -212,47 +213,6 @@ export const features: { title: string; text: string; icon: LucideIcon }[] = [
     title: "Every trade, one team",
     text: "Civil, structural, architectural and MEP estimators work together, so scopes don't overlap or fall through the gaps.",
     icon: Users,
-  },
-];
-
-// ---------------------------------------------------------------------------
-// Stats band
-// ---------------------------------------------------------------------------
-
-// TODO: placeholder stats from the design. Replace with real numbers before launch.
-export const stats = [
-  { value: 3850, suffix: "+", label: "Estimates delivered" },
-  { value: 98.4, decimals: 1, suffix: "%", label: "On-time delivery" },
-  { value: 1.4, decimals: 1, prefix: "$", suffix: "B+", label: "Construction value estimated" },
-  { value: 480, suffix: "+", label: "Contractor clients" },
-];
-
-// ---------------------------------------------------------------------------
-// Testimonials
-// ---------------------------------------------------------------------------
-
-// TODO: placeholder testimonials. Replace with real, approved client quotes before launch.
-export const testimonials = [
-  {
-    quote:
-      "The color-coded markups make checking quantities quick. We bid more drywall and framing work last quarter than ever, without adding an estimator.",
-    name: "Marcus V.",
-    role: "Preconstruction Manager, drywall contractor",
-    location: "Dallas, TX",
-  },
-  {
-    quote:
-      "We use Syntax for overflow when we're bidding several jobs at once. Their numbers line up with the sub bids we get back, which is exactly what we need.",
-    name: "Sarah J.",
-    role: "Chief Estimator, general contractor",
-    location: "Denver, CO",
-  },
-  {
-    quote:
-      "An addendum dropped two days before the bid and they turned the update around the next morning. The Excel files have live formulas, so we adjust margins ourselves.",
-    name: "Dave K.",
-    role: "Owner, electrical contractor",
-    location: "Atlanta, GA",
   },
 ];
 

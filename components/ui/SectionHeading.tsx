@@ -2,6 +2,8 @@ import { cn } from "@/lib/cn";
 
 type SectionHeadingProps = {
   eyebrow?: string;
+  /** "text" = orange overline (home page), "chip" = blue pill (service and trade pages) */
+  eyebrowStyle?: "text" | "chip";
   title: React.ReactNode;
   intro?: React.ReactNode;
   /** Used as the heading's id so the parent Section can reference it */
@@ -13,7 +15,30 @@ type SectionHeadingProps = {
 };
 
 /** Small uppercase overline used above section titles. */
-export function Eyebrow({ children, inverted, className }: { children: React.ReactNode; inverted?: boolean; className?: string }) {
+export function Eyebrow({
+  children,
+  inverted,
+  variant = "text",
+  className,
+}: {
+  children: React.ReactNode;
+  inverted?: boolean;
+  variant?: "text" | "chip";
+  className?: string;
+}) {
+  if (variant === "chip") {
+    return (
+      <span
+        className={cn(
+          "inline-block w-fit rounded px-2.5 py-1 font-sans text-caption font-semibold uppercase tracking-[0.1em]",
+          inverted ? "border border-white/20 bg-navy-800 text-accent" : "bg-blue-50 text-blueprint",
+          className,
+        )}
+      >
+        {children}
+      </span>
+    );
+  }
   return (
     <span
       className={cn(
@@ -29,6 +54,7 @@ export function Eyebrow({ children, inverted, className }: { children: React.Rea
 
 export function SectionHeading({
   eyebrow,
+  eyebrowStyle = "text",
   title,
   intro,
   id,
@@ -44,7 +70,11 @@ export function SectionHeading({
         className,
       )}
     >
-      {eyebrow && <Eyebrow inverted={inverted}>{eyebrow}</Eyebrow>}
+      {eyebrow && (
+        <Eyebrow inverted={inverted} variant={eyebrowStyle} className={eyebrowStyle === "chip" ? "mb-1" : undefined}>
+          {eyebrow}
+        </Eyebrow>
+      )}
       <h2
         id={id}
         className={cn(

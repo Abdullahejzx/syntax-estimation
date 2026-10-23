@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { features, homeFaqs, stats, steps, testimonials } from "@/content/home";
+import { features, homeFaqs, steps } from "@/content/home";
+import { stats, testimonials } from "@/content/proof";
 import { localBusinessSchema } from "@/lib/schema";
-import { Audiences } from "@/components/home/Audiences";
+import { Audiences } from "@/components/sections/Audiences";
 import { Hero } from "@/components/home/Hero";
 import { LatestInsights } from "@/components/home/LatestInsights";
 import { Pricing } from "@/components/home/Pricing";
