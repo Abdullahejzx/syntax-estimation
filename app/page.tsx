@@ -9,7 +9,7 @@ import { LatestInsights } from "@/components/home/LatestInsights";
 import { Pricing } from "@/components/home/Pricing";
 import { SampleEstimate } from "@/components/home/SampleEstimate";
 import { ServicesGrid } from "@/components/home/ServicesGrid";
-import { SoftwareStrip } from "@/components/home/SoftwareStrip";
+import { SoftwareStrip } from "@/components/sections/SoftwareStrip";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
