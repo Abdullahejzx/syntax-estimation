@@ -21,7 +21,7 @@ export function ScopeMatrix({ title, intro, items }: ScopeMatrixProps) {
               <div className="flex h-full gap-4 rounded-lg border border-line bg-white p-4 shadow-card sm:p-5">
                 <span
                   aria-hidden="true"
-                  className="tabular inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 font-mono text-caption font-bold text-blueprint"
+                  className="tabular inline-flex size-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 font-mono text-caption font-bold text-blueprint-ink"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>

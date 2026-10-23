@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/site";
 import { getAuthor } from "@/content/authors";
 import { quoteHref } from "@/content/navigation";
 import { categoryHref, formatDate, getAllPosts, getHeadings, getPost, getRelatedPosts, postHref, toMeta } from "@/lib/blog";
+import { socialMetadata } from "@/lib/metadata";
 import { articleSchema } from "@/lib/schema";
 import { PostBody } from "@/components/blog/PostBody";
 import { PostCard } from "@/components/blog/PostCard";
@@ -32,23 +33,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost((await params).slug);
   if (!post) return {};
   const path = postHref(post.slug);
+  const social = socialMetadata({ title: post.title, description: post.description, path, image: `blog/${post.slug}`, type: "article" });
   return {
     title: post.title,
     description: post.description,
     alternates: { canonical: path },
     authors: [{ name: post.author }],
     openGraph: {
+      ...social.openGraph,
       type: "article",
-      title: post.title,
-      description: post.description,
-      url: path,
       publishedTime: post.date,
       modifiedTime: post.updated ?? post.date,
       authors: [post.author],
       section: post.category,
       tags: post.tags,
     },
-    twitter: { title: post.title, description: post.description },
+    twitter: social.twitter,
   };
 }
 
@@ -84,7 +84,7 @@ function PostSidebar() {
         </p>
       </div>
       <div className="rounded-xl bg-blue-50 p-6">
-        <FileSpreadsheet aria-hidden="true" className="size-7 text-blueprint" />
+        <FileSpreadsheet aria-hidden="true" className="size-7 text-blueprint-ink" />
         <h2 className="mt-3 text-headline-sm font-bold">See a real deliverable</h2>
         <p className="mt-1 text-body-sm">Get our sample package: an unlocked estimate workbook with linked markups.</p>
         <Link href="/#sample-estimate" className="mt-3 inline-flex min-h-11 items-center gap-1 text-body-sm font-semibold text-accent-ink hover:underline">
@@ -92,7 +92,7 @@ function PostSidebar() {
         </Link>
       </div>
       <a href={siteConfig.phoneHref} className="flex items-center gap-3 rounded-xl border border-line bg-white p-4 shadow-card hover:border-blueprint">
-        <span aria-hidden="true" className="inline-flex size-10 items-center justify-center rounded-full bg-blue-50 text-blueprint">
+        <span aria-hidden="true" className="inline-flex size-10 items-center justify-center rounded-full bg-blue-50 text-blueprint-ink">
           <Phone className="size-5" />
         </span>
         <span>

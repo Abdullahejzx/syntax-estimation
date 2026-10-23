@@ -15,7 +15,7 @@ export function SoftwareStrip() {
               key={name}
               className="flex shrink-0 snap-start items-center gap-2 rounded-lg border border-line bg-white px-3 py-2 shadow-card"
             >
-              <Icon aria-hidden="true" className={i % 2 ? "size-[18px] text-accent-ink" : "size-[18px] text-blueprint"} />
+              <Icon aria-hidden="true" className={i % 2 ? "size-[18px] text-accent-ink" : "size-[18px] text-blueprint-ink"} />
               <span className="text-label font-semibold text-navy">{name}</span>
             </li>
           ))}

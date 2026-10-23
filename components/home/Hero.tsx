@@ -45,7 +45,7 @@ function EstimatePreview() {
       <div className="rounded-lg bg-white p-4 text-ink shadow-float">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-caption font-semibold uppercase text-blueprint">Sample takeoff summary</p>
+            <p className="text-caption font-semibold uppercase text-blueprint-ink">Sample takeoff summary</p>
             <p className="font-display text-[1rem] font-bold text-navy">{heroEstimate.project}</p>
           </div>
           <span className="inline-flex shrink-0 items-center gap-1 rounded bg-blue-50 px-2 py-1 text-caption font-semibold text-navy">
@@ -113,7 +113,7 @@ export function Hero() {
               </ButtonLink>
               {/* TODO: link to a downloadable sample estimate PDF once one exists */}
               <ButtonLink href="/#sample-estimate" variant="secondary" size="lg" fullOnMobile>
-                <FileText aria-hidden="true" className="size-[18px] text-blueprint" />
+                <FileText aria-hidden="true" className="size-[18px] text-blueprint-ink" />
                 See a Sample Estimate
               </ButtonLink>
             </div>

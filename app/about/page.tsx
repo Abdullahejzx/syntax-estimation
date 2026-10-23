@@ -32,7 +32,7 @@ export default function AboutPage() {
         tagTone="accent"
         title={
           <>
-            {about.hero.titleStart} <span className="text-blueprint">{about.hero.titleEnd}</span>
+            {about.hero.titleStart} <span className="text-blueprint-ink">{about.hero.titleEnd}</span>
           </>
         }
         intro={about.hero.intro}
@@ -44,7 +44,7 @@ export default function AboutPage() {
               <ArrowRight aria-hidden="true" className="size-[18px]" />
             </ButtonLink>
             <ButtonLink href="#credentials" variant="secondary" size="lg" fullOnMobile>
-              <ShieldCheck aria-hidden="true" className="size-[18px] text-blueprint" />
+              <ShieldCheck aria-hidden="true" className="size-[18px] text-blueprint-ink" />
               View Our Credentials
             </ButtonLink>
           </>

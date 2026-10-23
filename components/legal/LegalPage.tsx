@@ -22,7 +22,7 @@ function Toc({ doc }: { doc: LegalDoc }) {
       {doc.sections.map((s, i) => (
         <li key={s.id}>
           <a href={`#${s.id}`} className="flex min-h-9 items-center gap-2 rounded-md px-2 text-body hover:bg-mist hover:text-navy">
-            <span className="tabular w-5 shrink-0 text-caption text-blueprint">{i + 1}.</span>
+            <span className="tabular w-5 shrink-0 text-caption text-blueprint-ink">{i + 1}.</span>
             {s.title}
           </a>
         </li>
@@ -69,7 +69,7 @@ export function LegalPage({ doc }: { doc: LegalDoc }) {
                     .filter((l) => l.href !== doc.path)
                     .map((l) => (
                       <li key={l.href}>
-                        <Link href={l.href} className="flex min-h-9 items-center rounded-md px-2 text-body-sm text-blueprint hover:bg-mist">
+                        <Link href={l.href} className="flex min-h-9 items-center rounded-md px-2 text-body-sm text-blueprint-ink hover:bg-mist">
                           {l.label}
                         </Link>
                       </li>
@@ -106,11 +106,11 @@ export function LegalPage({ doc }: { doc: LegalDoc }) {
               <h2 className="text-headline-sm font-bold">Questions about this policy?</h2>
               <p className="mt-1 text-body-md">Contact {siteConfig.legalName}:</p>
               <div className="mt-3 flex flex-col gap-1 sm:flex-row sm:gap-6">
-                <a href={`mailto:${siteConfig.email}`} className="flex min-h-11 items-center gap-2 font-semibold text-blueprint hover:underline">
+                <a href={`mailto:${siteConfig.email}`} className="flex min-h-11 items-center gap-2 font-semibold text-blueprint-ink hover:underline">
                   <Mail aria-hidden="true" className="size-4" />
                   {siteConfig.email}
                 </a>
-                <a href={siteConfig.phoneHref} className="flex min-h-11 items-center gap-2 font-semibold text-blueprint hover:underline">
+                <a href={siteConfig.phoneHref} className="flex min-h-11 items-center gap-2 font-semibold text-blueprint-ink hover:underline">
                   <Phone aria-hidden="true" className="size-4" />
                   {siteConfig.phone}
                 </a>

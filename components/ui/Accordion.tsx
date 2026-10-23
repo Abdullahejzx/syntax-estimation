@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useId, useState } from "react";
 import { cn } from "@/lib/cn";
@@ -54,7 +54,7 @@ export function Accordion({ items, defaultOpen = 0, className }: AccordionProps)
             </h3>
             <AnimatePresence initial={false}>
               {isOpen && (
-                <motion.div
+                <m.div
                   id={panelId}
                   role="region"
                   aria-labelledby={buttonId}
@@ -65,7 +65,7 @@ export function Accordion({ items, defaultOpen = 0, className }: AccordionProps)
                   className="overflow-hidden"
                 >
                   <p className="px-5 pb-5 text-body-md text-body">{item.answer}</p>
-                </motion.div>
+                </m.div>
               )}
             </AnimatePresence>
           </div>

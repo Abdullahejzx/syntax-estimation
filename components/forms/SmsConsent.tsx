@@ -29,11 +29,11 @@ export function SmsConsent({ idPrefix = "sms" }: { idPrefix?: string }) {
       </label>
       <p className="pl-[28px] text-caption text-body">
         See our{" "}
-        <Link href="/privacy-policy/" className="font-medium text-blueprint underline underline-offset-2">
+        <Link href="/privacy-policy/" className="font-medium text-blueprint-ink underline underline-offset-2">
           Privacy Policy
         </Link>{" "}
         and{" "}
-        <Link href="/sms-terms/" className="font-medium text-blueprint underline underline-offset-2">
+        <Link href="/sms-terms/" className="font-medium text-blueprint-ink underline underline-offset-2">
           SMS Terms
         </Link>
         .

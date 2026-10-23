@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { ChevronDown, Menu } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { mainNav, quoteHref } from "@/content/navigation";
@@ -154,7 +154,7 @@ export function SiteHeader() {
       {/* Desktop mega menus */}
       <AnimatePresence>
         {openMenu && (
-          <motion.div
+          <m.div
             key={openMenu}
             id={`mega-${openMenu}`}
             initial={{ opacity: 0, y: -6 }}
@@ -168,7 +168,7 @@ export function SiteHeader() {
             <Container>
               {openMenu === "services" ? <ServicesMenu onNavigate={closeAll} /> : <TradesMenu onNavigate={closeAll} />}
             </Container>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
 

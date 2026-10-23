@@ -52,8 +52,8 @@ export function FileDropzone({ files, onChange, error, label = "Upload plans / s
       <div
         role="button"
         tabIndex={0}
-        aria-labelledby={`${id}-label`}
-        aria-describedby={`${id}-rules`}
+        // The name repeats the visible prompt so voice-control users can say what they see
+        aria-labelledby={`${id}-prompt ${id}-rules ${id}-label`}
         onClick={() => inputRef.current?.click()}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
@@ -77,10 +77,10 @@ export function FileDropzone({ files, onChange, error, label = "Upload plans / s
           dragging ? "border-blueprint bg-blue-50" : shownError ? "border-[#b42318] bg-white" : "border-line-strong bg-mist hover:border-blueprint",
         )}
       >
-        <CloudUpload aria-hidden="true" className={cn("mb-1.5 text-blueprint", compact ? "size-6" : "size-8")} />
-        <p className="text-body-sm font-medium text-navy">
+        <CloudUpload aria-hidden="true" className={cn("mb-1.5 text-blueprint-ink", compact ? "size-6" : "size-8")} />
+        <p id={`${id}-prompt`} className="text-body-sm font-medium text-navy">
           Drag &amp; drop files here, or{" "}
-          <span className="font-semibold text-blueprint underline underline-offset-2">browse</span>
+          <span className="font-semibold text-blueprint-ink underline underline-offset-2">browse</span>
         </p>
         <p id={`${id}-rules`} className="mt-0.5 text-caption text-body">
           {ALLOWED_LABEL} · up to {formatBytes(MAX_TOTAL_BYTES)} total
@@ -107,7 +107,7 @@ export function FileDropzone({ files, onChange, error, label = "Upload plans / s
               key={`${file.name}-${file.size}`}
               className="flex items-center gap-2 rounded-md border border-line bg-white py-1 pr-1 pl-2.5 text-body-sm"
             >
-              <FileText aria-hidden="true" className="size-4 shrink-0 text-blueprint" />
+              <FileText aria-hidden="true" className="size-4 shrink-0 text-blueprint-ink" />
               <span className="min-w-0 flex-1 truncate text-navy">{file.name}</span>
               <span className="shrink-0 text-caption text-body">{formatBytes(file.size)}</span>
               <button

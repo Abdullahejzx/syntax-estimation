@@ -4,7 +4,7 @@ import { Check, Link2, Mail } from "lucide-react";
 import { useState } from "react";
 
 const iconBtn =
-  "inline-flex size-11 items-center justify-center rounded-lg border border-line bg-mist text-navy transition-colors hover:border-blueprint hover:text-blueprint";
+  "inline-flex size-11 items-center justify-center rounded-lg border border-line bg-mist text-navy transition-colors hover:border-blueprint hover:text-blueprint-ink";
 
 /** Share links for LinkedIn, X and email, plus copy-link. Uses plain share URLs: no third-party scripts. */
 export function ShareButtons({ url, title }: { url: string; title: string }) {

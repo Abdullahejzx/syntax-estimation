@@ -123,7 +123,7 @@ const elements = {
   ol: (props: ComponentPropsWithoutRef<"ol">) => <ol {...props} className="my-4 list-decimal space-y-2 pl-6 text-body-md leading-7 text-ink marker:font-bold marker:text-navy" />,
   strong: (props: ComponentPropsWithoutRef<"strong">) => <strong {...props} className="font-semibold text-navy" />,
   a: ({ href = "", ...props }: ComponentPropsWithoutRef<"a">) => {
-    const className = "font-semibold text-blueprint underline underline-offset-2 hover:text-navy";
+    const className = "font-semibold text-blueprint-ink underline underline-offset-2 hover:text-navy";
     return href.startsWith("/") ? (
       <Link href={href} {...props} className={className} />
     ) : (

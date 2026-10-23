@@ -34,7 +34,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const trade = getTrade((await params).slug);
   if (!trade) return {};
-  return pageMetadata({ ...trade.seo, path: tradeHref(trade.slug) });
+  return pageMetadata({ ...trade.seo, path: tradeHref(trade.slug), image: `trades/${trade.slug}` });
 }
 
 export default async function TradePage({ params }: Props) {
@@ -65,7 +65,7 @@ export default async function TradePage({ params }: Props) {
               <ArrowRight aria-hidden="true" className="size-[18px]" />
             </ButtonLink>
             <ButtonLink href="#package" variant="secondary" size="lg" fullOnMobile>
-              <FileDown aria-hidden="true" className="size-[18px] text-blueprint" />
+              <FileDown aria-hidden="true" className="size-[18px] text-blueprint-ink" />
               See a Sample Takeoff
             </ButtonLink>
           </>

@@ -64,9 +64,9 @@ export default function NotFound() {
               <ul className="mt-3 divide-y divide-line">
                 {popular.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="flex min-h-11 items-center justify-between gap-3 text-body-md text-navy hover:text-blueprint">
+                    <Link href={link.href} className="flex min-h-11 items-center justify-between gap-3 text-body-md text-navy hover:text-blueprint-ink">
                       {link.label}
-                      <ArrowRight aria-hidden="true" className="size-4 text-blueprint" />
+                      <ArrowRight aria-hidden="true" className="size-4 text-blueprint-ink" />
                     </Link>
                   </li>
                 ))}

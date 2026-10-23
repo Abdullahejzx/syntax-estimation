@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { ChevronDown, Mail, MapPin, Phone, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { fullAddress, siteConfig } from "@/config/site";
@@ -65,7 +65,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
   return (
     <AnimatePresence>
       {open && (
-        <motion.div
+        <m.div
           ref={panelRef}
           id="mobile-menu"
           role="dialog"
@@ -128,7 +128,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                     </button>
                     <AnimatePresence initial={false}>
                       {isOpen && (
-                        <motion.ul
+                        <m.ul
                           id={panelId}
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
@@ -151,7 +151,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                             </li>
                           ))}
                           <li aria-hidden="true" className="h-3" />
-                        </motion.ul>
+                        </m.ul>
                       )}
                     </AnimatePresence>
                   </li>
@@ -177,7 +177,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
               Get a Free Quote
             </Link>
           </div>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );

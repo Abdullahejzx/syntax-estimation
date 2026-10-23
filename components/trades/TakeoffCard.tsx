@@ -10,7 +10,7 @@ export function TakeoffCard({ card }: { card: Trade["heroCard"] }) {
     <figure aria-label={`Sample takeoff summary: ${card.project}`} className="rounded-xl border border-line bg-white p-3 shadow-float sm:p-4">
       <figcaption className="flex items-center justify-between gap-3 rounded-lg bg-mist px-3 py-2.5 text-caption">
         <span className="flex min-w-0 items-center gap-2 font-semibold uppercase text-navy">
-          <PencilRuler aria-hidden="true" className="size-4 shrink-0 text-blueprint" />
+          <PencilRuler aria-hidden="true" className="size-4 shrink-0 text-blueprint-ink" />
           <span className="truncate">{card.sheet}</span>
         </span>
         <span className="hidden shrink-0 font-mono text-[0.6875rem] text-body xs:inline">SCALE 1/8&quot; = 1&apos;-0&quot;</span>

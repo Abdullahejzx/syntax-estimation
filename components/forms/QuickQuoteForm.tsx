@@ -199,7 +199,7 @@ export function QuickQuoteForm({
       <p className="flex items-center justify-center gap-1.5 text-center text-caption text-body">
         <Lock aria-hidden="true" className="size-3.5" />
         Confidential. Prefer more detail?{" "}
-        <Link href={quoteHref} className="font-semibold text-blueprint underline underline-offset-2">
+        <Link href={quoteHref} className="font-semibold text-blueprint-ink underline underline-offset-2">
           Use the full quote form
         </Link>
       </p>

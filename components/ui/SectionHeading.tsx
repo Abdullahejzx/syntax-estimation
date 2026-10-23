@@ -31,7 +31,7 @@ export function Eyebrow({
       <span
         className={cn(
           "inline-block w-fit rounded px-2.5 py-1 font-sans text-caption font-semibold uppercase tracking-[0.1em]",
-          inverted ? "border border-white/20 bg-navy-800 text-accent" : "bg-blue-50 text-blueprint",
+          inverted ? "border border-white/20 bg-navy-800 text-accent" : "bg-blue-50 text-blueprint-ink",
           className,
         )}
       >

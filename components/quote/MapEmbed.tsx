@@ -42,7 +42,7 @@ export function MapEmbed() {
             <Building2 className="size-5" />
           </span>
           <div>
-            <p className="inline-block rounded bg-blue-50 px-1.5 py-0.5 text-[0.6875rem] font-semibold text-blueprint">Headquarters</p>
+            <p className="inline-block rounded bg-blue-50 px-1.5 py-0.5 text-[0.6875rem] font-semibold text-blueprint-ink">Headquarters</p>
             <p className="mt-1 font-display font-bold text-navy">{siteConfig.name}</p>
             <address className="text-caption not-italic text-body">{fullAddress}</address>
             <a

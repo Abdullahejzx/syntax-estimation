@@ -14,16 +14,16 @@ export function AboutVisual() {
       <div className="rounded-xl border border-line bg-white p-3 shadow-lift">
         <div className="flex items-center justify-between rounded-md bg-mist px-3 py-2 text-caption">
           <span className="flex items-center gap-1.5 font-semibold text-navy">
-            <PencilRuler className="size-3.5 text-blueprint" />
+            <PencilRuler className="size-3.5 text-blueprint-ink" />
             FOUNDATION_SHEET_A2.1.dwg
           </span>
-          <span className="hidden rounded bg-blue-50 px-1.5 py-0.5 text-[0.625rem] font-semibold text-blueprint sm:inline">QA checked</span>
+          <span className="hidden rounded bg-blue-50 px-1.5 py-0.5 text-[0.625rem] font-semibold text-blueprint-ink sm:inline">QA checked</span>
         </div>
         <div className="bg-blueprint-grid relative mt-2 h-28 rounded-md bg-mist">
           <div className="absolute top-4 bottom-4 left-[18%] right-[18%] border-y border-dashed border-navy/50" />
           <div className="absolute top-3 bottom-3 left-[40%] border-l border-dashed border-navy/50" />
           <div className="absolute top-3 bottom-3 left-[68%] border-l border-dashed border-navy/50" />
-          <span className="absolute top-8 left-[22%] rounded border border-blueprint bg-blue-50 px-2 py-1 text-[0.625rem] font-semibold text-blueprint">
+          <span className="absolute top-8 left-[22%] rounded border border-blueprint bg-blue-50 px-2 py-1 text-[0.625rem] font-semibold text-blueprint-ink">
             F-1 footing · 142.8 CY
           </span>
           <span className="absolute top-[4.25rem] right-[8%] rounded border sm:top-10 sm:right-[14%] border-accent bg-accent-50 px-2 py-1 text-[0.625rem] font-semibold text-accent-ink">
@@ -35,7 +35,7 @@ export function AboutVisual() {
       <div className="relative -mt-2 ml-0 w-[88%] rounded-xl border border-line bg-white p-4 shadow-float sm:-ml-6">
         <div className="flex items-start justify-between gap-3">
           <p className="flex items-center gap-2 font-display text-[1rem] font-bold text-navy">
-            <FileSpreadsheet className="size-4 text-blueprint" />
+            <FileSpreadsheet className="size-4 text-blueprint-ink" />
             CSI 03 30 00 concrete takeoff
           </p>
           <span className="shrink-0 rounded bg-blue-50 px-2 py-0.5 text-[0.6875rem] font-semibold text-navy">.XLSX</span>
@@ -98,7 +98,7 @@ export function StorySection() {
             <div className="rounded-xl border border-line bg-white p-6 shadow-lift sm:p-8">
               <div className="mb-6 flex items-center justify-between">
                 <h3 className="text-headline-md font-bold">{story.card.title}</h3>
-                <Wrench aria-hidden="true" className="size-6 text-blueprint" />
+                <Wrench aria-hidden="true" className="size-6 text-blueprint-ink" />
               </div>
               <ul className="space-y-6">
                 {story.card.items.map((item) => (
@@ -151,7 +151,7 @@ export function TimelineSection() {
                   <h3 className="mt-4 text-headline-sm font-bold">{item.title}</h3>
                   <p className="mt-2 text-body-sm sm:text-body-md">{item.text}</p>
                   <p className="mt-auto flex items-center gap-1.5 pt-5 text-caption text-body">
-                    <Clock aria-hidden="true" className="size-3.5 text-blueprint" />
+                    <Clock aria-hidden="true" className="size-3.5 text-blueprint-ink" />
                     {item.foot}
                   </p>
                 </article>
@@ -210,7 +210,7 @@ export function TeamSection() {
                   </span>
                   <div>
                     <h3 className="text-headline-sm font-bold">{m.name}</h3>
-                    <p className="text-body-sm font-semibold text-blueprint">{m.role}</p>
+                    <p className="text-body-sm font-semibold text-blueprint-ink">{m.role}</p>
                     <p className="flex items-center gap-1 text-caption text-body">
                       <Clock aria-hidden="true" className="size-3.5 text-accent-ink" />
                       {m.years} years of experience
@@ -240,7 +240,7 @@ export function ToolsSection() {
         <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
           {tools.software.map(({ icon: Icon, name, text }) => (
             <li key={name} className="flex flex-col items-center rounded-lg border border-line bg-mist p-4 text-center">
-              <Icon aria-hidden="true" className="mb-2 size-6 text-blueprint" strokeWidth={1.75} />
+              <Icon aria-hidden="true" className="mb-2 size-6 text-blueprint-ink" strokeWidth={1.75} />
               <span className="text-body-sm font-bold text-navy">{name}</span>
               <span className="text-caption text-body">{text}</span>
             </li>

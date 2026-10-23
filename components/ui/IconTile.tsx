@@ -9,7 +9,7 @@ type IconTileProps = {
 };
 
 const tones = {
-  blue: "bg-blue-50 text-blueprint",
+  blue: "bg-blue-50 text-blueprint-ink",
   accent: "bg-accent-50 text-accent-ink",
   navy: "bg-navy text-white",
 };

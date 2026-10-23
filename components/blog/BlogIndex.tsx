@@ -226,18 +226,18 @@ export function BlogIndex({ posts, page, totalPages, category }: BlogIndexProps)
                   <Eyebrow className="mb-1">Editor&apos;s picks</Eyebrow>
                   <h2 className="text-headline-md font-bold">Popular Estimating Guides</h2>
                 </div>
-                <TrendingUp aria-hidden="true" className="size-6 text-blueprint" />
+                <TrendingUp aria-hidden="true" className="size-6 text-blueprint-ink" />
               </div>
               <ol className="mt-6 divide-y divide-line">
                 {popular.map((p, i) => (
                   <li key={p.slug}>
                     <Link href={postHref(p.slug)} className="group flex gap-4 py-4">
-                      <span className="tabular font-display text-headline-md font-bold text-line-strong">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="tabular font-display text-headline-md font-bold text-accent-strong">{String(i + 1).padStart(2, "0")}</span>
                       <span>
                         <span className="block text-caption font-semibold text-accent-ink">
                           {p.category} · {p.readTime}
                         </span>
-                        <span className="block font-display font-bold text-navy group-hover:text-blueprint">{p.title}</span>
+                        <span className="block font-display font-bold text-navy group-hover:text-blueprint-ink">{p.title}</span>
                       </span>
                     </Link>
                   </li>

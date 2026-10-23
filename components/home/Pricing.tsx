@@ -33,7 +33,7 @@ export function Pricing() {
                     Most popular
                   </span>
                 )}
-                <p className={cn("text-caption font-bold uppercase tracking-wider", tier.featured ? "text-accent-ink" : "text-blueprint")}>
+                <p className={cn("text-caption font-bold uppercase tracking-wider", tier.featured ? "text-accent-ink" : "text-blueprint-ink")}>
                   {tier.label}
                 </p>
                 <h3 className="mt-1 text-headline-md font-bold">{tier.name}</h3>

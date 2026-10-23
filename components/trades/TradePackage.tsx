@@ -7,7 +7,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const zoneStyles = [
-  { box: "border-blueprint bg-blue-50", text: "text-blueprint", dot: "bg-blueprint" },
+  { box: "border-blueprint bg-blue-50", text: "text-blueprint-ink", dot: "bg-blueprint" },
   { box: "border-accent bg-accent-50", text: "text-accent-ink", dot: "bg-accent" },
   { box: "border-[#7c3aed] bg-[#f5f3ff]", text: "text-[#5b21b6]", dot: "bg-[#7c3aed]" },
   { box: "border-[#059669] bg-[#ecfdf5]", text: "text-[#047857]", dot: "bg-[#059669]" },
@@ -64,7 +64,7 @@ export function TradePackage({ data, tradeName }: { data: Trade["package"]; trad
             <figure className="flex h-full flex-col rounded-xl bg-blue-50 p-4 sm:p-5">
               <figcaption className="mb-4 flex items-center justify-between gap-3 rounded-lg bg-white px-3 py-2.5 shadow-card">
                 <span className="flex items-center gap-2 text-body-sm font-semibold text-navy">
-                  <FileSpreadsheet aria-hidden="true" className="size-4 text-blueprint" />
+                  <FileSpreadsheet aria-hidden="true" className="size-4 text-blueprint-ink" />
                   Itemized takeoff sheet (.XLSX)
                 </span>
                 <span className="rounded bg-[#047857] px-2 py-0.5 text-[0.625rem] font-bold uppercase text-white">Unlocked</span>

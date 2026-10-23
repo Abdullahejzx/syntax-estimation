@@ -70,7 +70,7 @@ export function ClientTypeCards({ title, intro }: { title: string; intro: string
                       <li key={segment.id}>
                         <Link
                           href={`${tradeHref(client.slug)}#${segment.id}`}
-                          className="flex h-full min-h-11 items-start gap-2 rounded-lg border border-line bg-mist p-3 text-body-sm font-semibold text-navy transition-colors hover:border-blueprint hover:text-blueprint"
+                          className="flex h-full min-h-11 items-start gap-2 rounded-lg border border-line bg-mist p-3 text-body-sm font-semibold text-navy transition-colors hover:border-blueprint hover:text-blueprint-ink"
                         >
                           <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent-ink" strokeWidth={2.5} />
                           {segment.title}

@@ -62,7 +62,7 @@ export function EstimateSheet({ data, eyebrow = "Sample deliverable", title, int
             </div>
 
             <div className="flex flex-wrap items-center gap-x-5 gap-y-1 border-b border-line px-4 py-2 text-caption sm:px-5">
-              <span className="flex items-center gap-1.5 font-medium text-blueprint">
+              <span className="flex items-center gap-1.5 font-medium text-blueprint-ink">
                 <Sigma aria-hidden="true" className="size-3.5" />
                 Live formulas, unlocked cells
               </span>
@@ -142,7 +142,7 @@ export function EstimateSheet({ data, eyebrow = "Sample deliverable", title, int
               Marked-up PDF drawings included
             </li>
             <li className="flex items-center gap-1.5">
-              <Lock aria-hidden="true" className="size-4 text-blueprint" />
+              <Lock aria-hidden="true" className="size-4 text-blueprint-ink" />
               Unlocked Excel (.xlsx)
             </li>
             <li className="flex items-center gap-1.5">

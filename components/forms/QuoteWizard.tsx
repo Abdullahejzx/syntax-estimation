@@ -161,7 +161,7 @@ export function QuoteWizard() {
             <CircleCheck aria-hidden="true" className="size-9 text-accent-ink" />
           </span>
           {done.reference && (
-            <p className="mt-4 text-caption font-semibold uppercase tracking-wider text-blueprint">Confirmation #{done.reference}</p>
+            <p className="mt-4 text-caption font-semibold uppercase tracking-wider text-blueprint-ink">Confirmation #{done.reference}</p>
           )}
           <h2 className="mt-2 text-headline-lg-mobile font-bold sm:text-headline-lg">Thanks! Your plans are in.</h2>
           <p className="mx-auto mt-3 max-w-lg text-body-md">
@@ -270,7 +270,7 @@ export function QuoteWizard() {
                         className={cn(
                           "hidden font-display text-[0.9375rem] font-semibold sm:inline",
                           state === "upcoming" ? "text-body" : "text-navy",
-                          canJump && "group-hover:text-blueprint",
+                          canJump && "group-hover:text-blueprint-ink",
                         )}
                       >
                         {s.label}
@@ -312,7 +312,7 @@ export function QuoteWizard() {
                     className="peer sr-only"
                   />
                   <CircleCheck aria-hidden="true" className="absolute top-3 right-3 hidden size-5 text-accent-ink peer-checked:block" />
-                  <r.icon aria-hidden="true" className="mb-3 size-6 text-blueprint group-has-[:checked]:text-accent-ink" />
+                  <r.icon aria-hidden="true" className="mb-3 size-6 text-blueprint-ink group-has-[:checked]:text-accent-ink" />
                   <span className="font-display text-[0.9375rem] font-bold text-navy">{r.title}</span>
                   <span className="text-caption text-body">{r.text}</span>
                 </label>
@@ -376,7 +376,7 @@ export function QuoteWizard() {
                     data-field={i === 0 ? "services" : undefined}
                     className="size-[18px] shrink-0 accent-[var(--color-navy)]"
                   />
-                  <s.icon aria-hidden="true" className="size-4 shrink-0 text-blueprint" />
+                  <s.icon aria-hidden="true" className="size-4 shrink-0 text-blueprint-ink" />
                   {s.name}
                 </label>
               ))}

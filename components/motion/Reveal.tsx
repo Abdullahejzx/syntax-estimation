@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 type RevealProps = {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ type RevealProps = {
  * For reduced-motion visitors, MotionProvider drops the slide and keeps only a short fade.
  */
 export function Reveal({ children, className, delay = 0, y = 24, as = "div" }: RevealProps) {
-  const Component = as === "li" ? motion.li : motion.div;
+  const Component = as === "li" ? m.li : m.div;
   return (
     <Component
       className={className}

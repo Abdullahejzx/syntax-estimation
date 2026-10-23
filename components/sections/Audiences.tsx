@@ -47,7 +47,7 @@ export function Audiences({
                   >
                     {a.tag}
                   </span>
-                  <a.icon aria-hidden="true" className={cn("size-6", a.featured ? "text-accent-ink" : "text-blueprint")} />
+                  <a.icon aria-hidden="true" className={cn("size-6", a.featured ? "text-accent-ink" : "text-blueprint-ink")} />
                 </div>
                 <h3 className="text-headline-md font-bold">{a.title}</h3>
                 <p className="mt-1 mb-4 text-caption font-semibold text-accent-ink">{a.subtitle}</p>
@@ -63,7 +63,7 @@ export function Audiences({
                         <li key={t.slug}>
                           <Link
                             href={tradeHref(t.slug)}
-                            className="inline-flex min-h-8 items-center rounded border border-line bg-mist px-2.5 text-[0.75rem] font-semibold text-navy transition-colors hover:border-blueprint hover:text-blueprint"
+                            className="inline-flex min-h-8 items-center rounded border border-line bg-mist px-2.5 text-[0.75rem] font-semibold text-navy transition-colors hover:border-blueprint hover:text-blueprint-ink"
                           >
                             {t.shortName}
                           </Link>

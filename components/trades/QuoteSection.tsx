@@ -41,7 +41,7 @@ export function QuoteSection({ tradeName, context }: { tradeName: string; contex
                 <Phone aria-hidden="true" className="size-5 text-accent-ink" />
                 {siteConfig.phone}
               </a>
-              <a href={`mailto:${siteConfig.email}`} className="flex min-h-11 items-center gap-2 text-body-md text-blueprint hover:underline">
+              <a href={`mailto:${siteConfig.email}`} className="flex min-h-11 items-center gap-2 text-body-md text-blueprint-ink hover:underline">
                 <Mail aria-hidden="true" className="size-5" />
                 {siteConfig.email}
               </a>

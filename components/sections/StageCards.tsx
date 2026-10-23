@@ -51,7 +51,7 @@ export function StageCards({ items, eyebrow, title, intro, id = "stages", tone =
                   {stage.featured && ` · ${stage.featured}`}
                 </span>
                 <h3 className="text-headline-sm font-bold">{stage.title}</h3>
-                {stage.subtitle && <p className="mt-0.5 text-caption font-semibold text-blueprint">{stage.subtitle}</p>}
+                {stage.subtitle && <p className="mt-0.5 text-caption font-semibold text-blueprint-ink">{stage.subtitle}</p>}
                 <p className="mt-3 text-body-sm sm:text-body-md">{stage.text}</p>
                 <div className="mt-auto pt-6">
                   <div className="flex items-baseline justify-between gap-3 border-t border-line pt-4">

@@ -24,7 +24,7 @@ export function SectorGrid({
           {sectors.map(({ title: name, text, note, icon: Icon }, i) => (
             <Reveal as="li" key={name} delay={(i % 4) * 0.05}>
               <div className="card-lift flex h-full flex-col rounded-xl border border-line bg-mist p-5">
-                <span aria-hidden="true" className="mb-4 inline-flex size-10 items-center justify-center rounded-lg bg-white text-blueprint shadow-card">
+                <span aria-hidden="true" className="mb-4 inline-flex size-10 items-center justify-center rounded-lg bg-white text-blueprint-ink shadow-card">
                   <Icon className="size-5" strokeWidth={1.75} />
                 </span>
                 <h3 className="text-headline-sm font-bold">{name}</h3>

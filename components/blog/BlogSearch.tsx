@@ -65,7 +65,7 @@ export function BlogSearch({ posts }: { posts: SearchItem[] }) {
                         </span>
                         <span className="block font-display font-bold text-navy">{p.title}</span>
                       </span>
-                      <ArrowRight aria-hidden="true" className="mt-5 size-4 shrink-0 text-blueprint" />
+                      <ArrowRight aria-hidden="true" className="mt-5 size-4 shrink-0 text-blueprint-ink" />
                     </Link>
                   </li>
                 ))}

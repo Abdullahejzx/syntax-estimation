@@ -22,7 +22,8 @@
   --color-accent-ink: #914d00; /* small orange text (labels, links), passes 4.5:1 */
   --color-accent-50: #fef3e7;
   --color-accent-100: #fde3c6;
-  --color-blueprint: #2f6fdb;
+  --color-blueprint: #2f6fdb; /* icons, borders, graphics */
+  --color-blueprint-ink: #2a64c8; /* blue text on white/mist/blue-50, passes 4.5:1 */
   --color-blue-50: #eef3fc;
   --color-blue-100: #dfe8f8;
   --color-line: #e2e8f0;

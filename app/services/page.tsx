@@ -31,7 +31,7 @@ export default function ServicesPage() {
               Get a Free Quote
             </ButtonLink>
             <ButtonLink href={quoteHref} variant="secondary" size="lg" fullOnMobile>
-              <FileUp aria-hidden="true" className="size-[18px] text-blueprint" />
+              <FileUp aria-hidden="true" className="size-[18px] text-blueprint-ink" />
               Upload Plans
             </ButtonLink>
           </>

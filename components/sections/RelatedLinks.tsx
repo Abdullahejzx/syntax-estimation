@@ -44,7 +44,7 @@ export function RelatedLinks({
                 <IconTile icon={trade.icon} size="sm" className="mb-3 bg-white shadow-card" />
                 <span className="font-display text-[0.9375rem] font-bold text-navy">{trade.shortName}</span>
                 {onTradePage && <span className="mt-1 hidden text-caption text-body sm:block">{trade.summary}</span>}
-                <span className="mt-auto inline-flex items-center gap-1 pt-3 text-caption font-semibold text-blueprint transition-[gap] group-hover:gap-2">
+                <span className="mt-auto inline-flex items-center gap-1 pt-3 text-caption font-semibold text-blueprint-ink transition-[gap] group-hover:gap-2">
                   Explore trade <ArrowRight aria-hidden="true" className="size-3.5" />
                 </span>
               </Link>
@@ -69,9 +69,9 @@ export function RelatedLinks({
               <li key={s.slug}>
                 <Link
                   href={serviceHref(s.slug)}
-                  className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-line bg-white px-3 text-body-sm font-semibold text-navy transition-colors hover:border-blueprint hover:text-blueprint"
+                  className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-line bg-white px-3 text-body-sm font-semibold text-navy transition-colors hover:border-blueprint hover:text-blueprint-ink"
                 >
-                  <s.icon aria-hidden="true" className="size-4 text-blueprint" />
+                  <s.icon aria-hidden="true" className="size-4 text-blueprint-ink" />
                   {s.shortName}
                 </Link>
               </li>

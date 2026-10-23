@@ -32,7 +32,7 @@ function PlanMarkup({ zones, sheetLabel }: { zones: ProcessTimelineProps["zones"
           <span aria-hidden="true" className="size-2.5 rounded-full bg-accent" />
           {sheetLabel}
         </span>
-        <span className="font-medium text-blueprint">Scale 1/4&quot; = 1&apos;-0&quot;</span>
+        <span className="font-medium text-blueprint-ink">Scale 1/4&quot; = 1&apos;-0&quot;</span>
       </figcaption>
       <div className="bg-blueprint-grid-light relative rounded-lg bg-navy p-4 pl-8 sm:p-6 sm:pl-10">
         <span aria-hidden="true" className="absolute top-1/2 left-2 -translate-y-1/2 -rotate-90 font-mono text-[0.625rem] text-navy-200 sm:left-3">
@@ -59,7 +59,7 @@ function PlanMarkup({ zones, sheetLabel }: { zones: ProcessTimelineProps["zones"
       </div>
       <div className="mt-3 flex flex-wrap justify-between gap-2 text-caption text-body">
         <span className="flex items-center gap-1.5">
-          <ShieldCheck aria-hidden="true" className="size-4 text-blueprint" />
+          <ShieldCheck aria-hidden="true" className="size-4 text-blueprint-ink" />
           Layered vector PDF
         </span>
         <span className="flex items-center gap-1.5">

@@ -32,7 +32,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getService((await params).slug);
   if (!service) return {};
-  return pageMetadata({ ...service.seo, path: serviceHref(service.slug) });
+  return pageMetadata({ ...service.seo, path: serviceHref(service.slug), image: `services/${service.slug}` });
 }
 
 export default async function ServicePage({ params }: Props) {
@@ -62,7 +62,7 @@ export default async function ServicePage({ params }: Props) {
             </ButtonLink>
             {/* TODO: link to a downloadable sample PDF once one exists */}
             <ButtonLink href="#sample-sheet" variant="secondary" size="lg" fullOnMobile>
-              <FileDown aria-hidden="true" className="size-[18px] text-blueprint" />
+              <FileDown aria-hidden="true" className="size-[18px] text-blueprint-ink" />
               See a Sample
             </ButtonLink>
           </>
