@@ -12,6 +12,7 @@ import { buttonClasses } from "@/components/ui/Button";
 import { Field, describedBy, inputClasses } from "./Field";
 import { FileDropzone } from "./FileDropzone";
 import { SmsConsent } from "./SmsConsent";
+import { useFormStart } from "./useFormStart";
 
 type QuickQuoteFormProps = {
   /** What the visitor was looking at, e.g. "Service: Quantity Takeoffs" */
@@ -32,6 +33,7 @@ export function QuickQuoteForm({
   subtitle = "Get a fixed price and delivery date for your plans.",
 }: QuickQuoteFormProps) {
   const formRef = useRef<HTMLFormElement>(null);
+  const startedAt = useFormStart();
   const [files, setFiles] = useState<File[]>([]);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
@@ -98,6 +100,7 @@ export function QuickQuoteForm({
 
       <input type="hidden" name="formType" value="quick-quote" />
       <input type="hidden" name="context" value={context} />
+      <input type="hidden" name="ts" value={startedAt} />
       {/* Honeypot: hidden from people, bots fill it in */}
       <div aria-hidden="true" className="absolute -left-[9999px] h-0 overflow-hidden">
         <label>

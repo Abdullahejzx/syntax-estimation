@@ -32,6 +32,20 @@ npm run typecheck  # TypeScript check
 | Pages | `app/` |
 | Components | `components/` (`layout`, `ui`, `motion`, `sections`, `home`) |
 
+## Quote form backend (PHP)
+
+All forms post to `public/api/quote.php`, which the build copies to `out/api/`. It validates input, stores uploaded plans privately, emails the team a summary with signed download links (via PHPMailer over SMTP) and sends the visitor a confirmation.
+
+| File | Purpose |
+| --- | --- |
+| `public/api/quote.php` | Form endpoint (JSON responses) |
+| `public/api/download.php` | Serves uploaded files through signed, expiring links |
+| `public/api/config.example.php` | Settings template. Copy to `config.php` (git-ignored) and fill in |
+| `public/api/lib/` | Shared helpers, email templates and PHPMailer 7.1.1 (blocked from the web) |
+| `public/api/.user.ini` | Raises PHP upload limits for the 100 MB maximum |
+
+Setup: copy `config.example.php` to `config.php`, then enter your SMTP mailbox, the addresses that should receive requests and a long random `download_secret`. Uploaded files go to `syntax-uploads/`, one level above `public_html`, so they can never be opened directly. The PHP backend needs a PHP host; it does not run under `npm run dev`. Full deployment steps arrive in Phase 7.
+
 ## Placeholders to replace before launch
 
 Search the code for `TODO`. That covers the stats, testimonials, prices, contact details, social links, the logo and any claims that still need confirming.

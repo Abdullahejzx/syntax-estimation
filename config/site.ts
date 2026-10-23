@@ -21,6 +21,8 @@ export const siteConfig = {
     country: "US",
   },
   hours: "Mon–Sat, all US time zones",
+  // TODO: confirm business hours
+  hoursDetail: ["Mon–Fri: 8:00 AM – 6:00 PM ET", "Sat: 9:00 AM – 2:00 PM ET"],
   // Machine-readable hours for schema.org (TODO: confirm)
   openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
 

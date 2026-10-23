@@ -3,26 +3,25 @@
 import { CircleCheck } from "lucide-react";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
+import { submitForm } from "@/lib/submitForm";
+import { useFormStart } from "@/components/forms/useFormStart";
 import { buttonClasses } from "@/components/ui/Button";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
 /**
  * Email capture for the sample estimate. Posts to the shared PHP endpoint
- * (built in Phase 5) with formType=sample-request.
+ * (public/api/quote.php) with formType=sample-request.
  */
 export function SampleRequestForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const startedAt = useFormStart();
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
-    try {
-      const res = await fetch(siteConfig.formEndpoint, { method: "POST", body: new FormData(e.currentTarget) });
-      setStatus(res.ok ? "sent" : "error");
-    } catch {
-      setStatus("error");
-    }
+    const result = await submitForm(new FormData(e.currentTarget));
+    setStatus(result.ok ? "sent" : "error");
   }
 
   if (status === "sent") {
@@ -37,6 +36,7 @@ export function SampleRequestForm() {
   return (
     <form onSubmit={onSubmit} className="w-full max-w-lg" noValidate={false}>
       <input type="hidden" name="formType" value="sample-request" />
+      <input type="hidden" name="ts" value={startedAt} />
       {/* Honeypot: hidden from people, bots fill it in */}
       <div aria-hidden="true" className="absolute -left-[9999px]">
         <label>

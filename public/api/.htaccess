@@ -1,0 +1,13 @@
+# Protects the quote form backend. Only quote.php and download.php are meant to be reached.
+Options -Indexes
+
+# Block settings, logs, data files and PHP ini overrides
+<FilesMatch "^(config|config\.example)\.php$|\.(log|json|ini|md)$|^\.user\.ini$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
