@@ -11,7 +11,7 @@ type PageHeroProps = {
   tag?: string;
   /** "blue" chip (services) or "accent" orange pill (trades), as in the designs */
   tagTone?: "blue" | "accent";
-  title: string;
+  title: React.ReactNode;
   intro: string;
   /** Buttons under the intro */
   actions?: React.ReactNode;

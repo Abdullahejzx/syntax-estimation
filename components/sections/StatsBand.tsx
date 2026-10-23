@@ -3,7 +3,16 @@ import { CountUp } from "@/components/motion/CountUp";
 import { Container } from "@/components/ui/Container";
 
 /** Navy band of big counting numbers. 2 columns on phones, 4 on desktop. */
-export function StatsBand({ stats, label = "Syntax Estimation by the numbers" }: { stats: Stat[]; label?: string }) {
+export function StatsBand({
+  stats,
+  label = "Syntax Estimation by the numbers",
+  note,
+}: {
+  stats: Stat[];
+  label?: string;
+  /** Optional line under the numbers */
+  note?: string;
+}) {
   return (
     <section aria-label={label} className="relative overflow-hidden bg-navy py-14 lg:py-16">
       <div aria-hidden="true" className="bg-blueprint-grid-light pointer-events-none absolute inset-0 opacity-60" />
@@ -25,6 +34,7 @@ export function StatsBand({ stats, label = "Syntax Estimation by the numbers" }:
             </div>
           ))}
         </dl>
+        {note && <p className="mt-10 border-t border-white/10 pt-6 text-center text-body-sm font-medium text-navy-200">{note}</p>}
       </Container>
     </section>
   );

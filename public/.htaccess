@@ -1,0 +1,8 @@
+# Apache settings for Hostinger. Copied into out/ by `npm run build`.
+# (Phase 7 adds caching, compression and HTTPS rules.)
+
+# Don't list folder contents
+Options -Indexes
+
+# Serve the custom 404 page for missing URLs
+ErrorDocument 404 /404.html
