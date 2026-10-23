@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Stitch design exports (reference only, never shipped)
+design-reference/
+
+# Quote form backend secrets and uploaded files
+public/api/config.php
+public/api/uploads/
+uploads/
+
+# Environment and local files
+.env
+.env*.local
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
