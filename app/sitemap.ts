@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/config/site";
+import { absoluteUrl } from "@/config/site";
 import { fulfilmentPolicy, privacyPolicy, smsTerms } from "@/content/legal";
 import { serviceHref, services } from "@/content/services";
 import { tradeHref, trades } from "@/content/trades";
@@ -11,10 +11,9 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
   const newestPost = posts[0]?.updated ?? posts[0]?.date;
-  const url = (path: string) => new URL(path, siteConfig.url).toString();
 
   const entry = (path: string, priority: number, changeFrequency: "weekly" | "monthly" | "yearly" = "monthly", lastModified?: string) => ({
-    url: url(path),
+    url: absoluteUrl(path),
     priority,
     changeFrequency,
     ...(lastModified && { lastModified }),

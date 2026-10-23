@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
+import { withBasePath } from "@/config/site";
 import { type PostMeta, formatDate, postHref } from "@/lib/blog-shared";
 import { cn } from "@/lib/cn";
 
@@ -10,7 +11,7 @@ export function PostCard({ post, compact, className }: { post: PostMeta; compact
       <div className="relative aspect-[16/9] overflow-hidden bg-blue-50">
         {/* eslint-disable-next-line @next/next/no-img-element -- static export; covers are lightweight SVGs */}
         <img
-          src={post.image}
+          src={withBasePath(post.image)}
           alt={post.imageAlt}
           width={1200}
           height={675}

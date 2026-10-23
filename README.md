@@ -17,6 +17,7 @@ Before launch, work through [LAUNCH-CHECKLIST.md](LAUNCH-CHECKLIST.md): every pl
 - [Set up email (SMTP)](#set-up-email-smtp)
 - [Deploy to Hostinger](#deploy-to-hostinger)
 - [After launch: SEO and performance](#after-launch-seo-and-performance)
+- [Client preview on GitHub Pages](#client-preview-on-github-pages)
 
 ## Requirements and commands
 
@@ -187,6 +188,25 @@ Uploaded plans are stored in `syntax-uploads/`, one level above `public_html`, s
   - The Framer Motion animation engine loads after the page is interactive.
   - The map only loads when clicked.
   - Hashed assets are cached for a year, and text files are compressed.
+
+## Client preview on GitHub Pages
+
+Every push to `master` publishes a preview to `https://<github-user>.github.io/<repo>/` via `.github/workflows/preview.yml`. The preview build:
+
+- serves the site from the repo's subfolder (`NEXT_PUBLIC_BASE_PATH`)
+- points share images and canonical links at the preview address (`NEXT_PUBLIC_SITE_URL`)
+- is hidden from search engines and has the forms switched off (`NEXT_PUBLIC_PREVIEW`), since GitHub Pages can't run PHP
+
+One-time setup: in the GitHub repo, go to **Settings > Pages** and set **Source** to **GitHub Actions**. Progress shows under the repo's **Actions** tab.
+
+To try the preview build locally:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/syntax-estimation NEXT_PUBLIC_PREVIEW=true npm run build
+node scripts/serve-out.mjs /syntax-estimation   # then open http://localhost:3200/syntax-estimation/
+```
+
+The real site for Hostinger is still built with a plain `npm run build`; none of the preview settings apply to it.
 
 ## Design reference
 

@@ -1,4 +1,4 @@
-import { siteConfig } from "@/config/site";
+import { productionUrl } from "@/config/site";
 import type { OgCard } from "@/lib/og";
 
 /*
@@ -32,7 +32,8 @@ function PlanSketch() {
 }
 
 export function OgImage({ eyebrow, title, subtitle }: OgCard) {
-  const domain = new URL(siteConfig.url).hostname.replace(/^www\./, "");
+  // Always the real domain, even on the GitHub Pages preview
+  const domain = new URL(productionUrl).hostname.replace(/^www\./, "");
   return (
     <div
       style={{

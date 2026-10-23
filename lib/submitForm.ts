@@ -1,4 +1,4 @@
-import { siteConfig } from "@/config/site";
+import { isPreview, siteConfig } from "@/config/site";
 
 /** Response shape returned by public/api/quote.php. */
 export type FormResult = {
@@ -30,6 +30,12 @@ function parse(status: number, text: string): FormResult {
  * since fetch can't report upload progress.
  */
 export function submitForm(data: FormData, onProgress?: (fraction: number) => void): Promise<FormResult> {
+  // The GitHub Pages preview has no PHP, so nothing could be sent
+  if (isPreview) {
+    // (the forms add "You can also email …" after this message)
+    return Promise.resolve({ ok: false, message: "This is a preview of the new website, so forms are switched off for now." });
+  }
+
   // Send how long the form was open (not the raw start time), so the server's bot
   // check isn't thrown off by a visitor's clock being set wrong.
   const started = Number(data.get("ts"));

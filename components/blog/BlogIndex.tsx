@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Clock, Download, FileSpreadsheet, Mail, Star, TrendingUp } from "lucide-react";
+import { withBasePath } from "@/config/site";
 import { getAuthor } from "@/content/authors";
 import {
   type PostMeta,
@@ -95,7 +96,7 @@ function FeaturedPost({ post }: { post: PostMeta }) {
     <article className="card-lift group relative grid overflow-hidden rounded-xl border border-line bg-white shadow-lift lg:grid-cols-2">
       <div className="relative aspect-[16/9] bg-blue-50 lg:aspect-auto">
         {/* eslint-disable-next-line @next/next/no-img-element -- static export; covers are lightweight SVGs */}
-        <img src={post.image} alt={post.imageAlt} width={1200} height={675} className="size-full object-cover" />
+        <img src={withBasePath(post.image)} alt={post.imageAlt} width={1200} height={675} className="size-full object-cover" />
         <span className="absolute top-4 left-4 rounded bg-navy px-2.5 py-1 text-caption font-semibold text-white">{post.category}</span>
       </div>
       <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">

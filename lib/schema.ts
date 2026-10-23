@@ -1,7 +1,5 @@
-import { siteConfig } from "@/config/site";
+import { absoluteUrl as absolute, siteConfig } from "@/config/site";
 import type { AccordionItem } from "@/components/ui/Accordion";
-
-const absolute = (path = "/") => new URL(path, siteConfig.url).toString();
 
 /** schema.org LocalBusiness for the home and contact pages. */
 export function localBusinessSchema() {

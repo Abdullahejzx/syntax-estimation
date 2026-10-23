@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   output: "export",
   // Emits /about/index.html instead of /about.html, which Apache serves without rewrite rules.
   trailingSlash: true,
+  // Empty for Hostinger; "/<repo>" for the GitHub Pages preview (see config/site.ts)
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? "",
   images: {
     // The Next.js image optimizer needs a server; images are pre-optimized at build time instead.
     unoptimized: true,

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Manrope } from "next/font/google";
-import { siteConfig } from "@/config/site";
+import { isPreview, siteConfig } from "@/config/site";
 import { MotionProvider } from "@/components/motion/MotionProvider";
 import { MobileActionBar } from "@/components/layout/MobileActionBar";
 import { SiteFooter } from "@/components/layout/SiteFooter";
@@ -33,6 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", images: ["/og/default.png"] },
   formatDetection: { telephone: false },
+  // Keep the GitHub Pages preview out of search results
+  ...(isPreview && { robots: { index: false, follow: false } }),
 };
 
 export const viewport: Viewport = {

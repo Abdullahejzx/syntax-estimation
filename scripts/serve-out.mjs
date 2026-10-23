@@ -8,6 +8,9 @@ import { createGzip } from "node:zlib";
 
 const root = join(import.meta.dirname, "..", "out");
 const port = Number(process.env.PORT ?? 3200);
+// Mirrors a GitHub Pages preview build, which lives under /<repo>/:
+//   node scripts/serve-out.mjs /syntax-estimation
+const base = process.argv[2] ?? process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const types = {
   ".html": "text/html; charset=utf-8",
@@ -27,7 +30,8 @@ const compressible = new Set([".html", ".js", ".css", ".json", ".svg", ".xml", "
 
 createServer((req, res) => {
   const url = new URL(req.url ?? "/", "http://localhost");
-  const path = normalize(decodeURIComponent(url.pathname)).replace(/^(\.\.[/\\])+/, "");
+  const pathname = base && url.pathname.startsWith(base) ? url.pathname.slice(base.length) || "/" : url.pathname;
+  const path = normalize(decodeURIComponent(pathname)).replace(/^(\.\.[/\\])+/, "");
   let file = join(root, path);
 
   if (existsSync(file) && statSync(file).isDirectory()) {

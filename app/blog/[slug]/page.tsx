@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, BadgeCheck, CalendarDays, CircleCheck, Clock, FileSpreadsheet, Headset, Phone } from "lucide-react";
-import { siteConfig } from "@/config/site";
+import { absoluteUrl, siteConfig, withBasePath } from "@/config/site";
 import { getAuthor } from "@/content/authors";
 import { quoteHref } from "@/content/navigation";
 import { categoryHref, formatDate, getAllPosts, getHeadings, getPost, getRelatedPosts, postHref, toMeta } from "@/lib/blog";
@@ -109,7 +109,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const path = postHref(post.slug);
-  const url = new URL(path, siteConfig.url).toString();
+  const url = absoluteUrl(path);
   const author = getAuthor(post.author);
   const headings = getHeadings(post.content);
   const related = getRelatedPosts(post).map(toMeta);
@@ -168,7 +168,7 @@ export default async function BlogPostPage({ params }: Props) {
         <Container>
           {/* eslint-disable-next-line @next/next/no-img-element -- static export; covers are lightweight SVGs */}
           <img
-            src={post.image}
+            src={withBasePath(post.image)}
             alt={post.imageAlt}
             width={1200}
             height={675}
