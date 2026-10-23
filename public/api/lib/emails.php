@@ -14,6 +14,7 @@ const FORM_LABELS = [
     'full-quote'     => 'Full quote request',
     'quick-quote'    => 'Quick quote request',
     'sample-request' => 'Sample estimate request',
+    'newsletter'     => 'Newsletter sign-up',
 ];
 
 /** Wraps content in a simple, email-client-safe layout. */
@@ -132,6 +133,13 @@ function confirmation_email(array $s, int $fileCount, array $config): array
     $company = $config['company'];
     $first = trim(explode(' ', $s['name'])[0] ?? '');
     $hello = '<p style="font-size:15px;margin:0 0 14px;">' . ($first !== '' ? 'Hi ' . h($first) . ',' : 'Hello,') . '</p>';
+
+    if ($s['formType'] === 'newsletter') {
+        $subject = 'You’re subscribed to ' . $company['name'] . ' estimating tips';
+        $body = $hello . '<p style="font-size:15px;margin:0 0 14px;">Thanks for signing up. Twice a month we’ll send practical estimating, takeoff and bidding tips. You can unsubscribe at any time by replying to any of our emails.</p>';
+        $text = strip_tags(str_replace('</p>', "\n\n", $body));
+        return [$subject, email_layout('Welcome aboard', $body, $company), $text];
+    }
 
     if ($s['formType'] === 'sample-request') {
         $subject = 'Your sample estimate from ' . $company['name'];

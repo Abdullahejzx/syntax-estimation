@@ -252,32 +252,3 @@ export const homeFaqs: AccordionItem[] = [
       "Yes. Your drawings and pricing are only seen by the estimators working on your project, and we never share them with other bidders. We are happy to sign your NDA.",
   },
 ];
-
-// ---------------------------------------------------------------------------
-// Latest insights (placeholder until the blog is built in Phase 6)
-// ---------------------------------------------------------------------------
-
-// TODO: Phase 6 replaces this list with the three newest posts from /content/blog
-export const latestPosts = [
-  {
-    title: "Concrete Takeoff Checklist: 12 Items Contractors Miss",
-    excerpt: "Over-excavation, lap splices, pump primers and the other line items that quietly erase concrete margins.",
-    category: "Checklists",
-    readTime: "8 min read",
-    icon: Layers,
-  },
-  {
-    title: "How to Read a Construction Estimate, Line by Line",
-    excerpt: "What every section of a professional estimate means, and the questions to ask before you sign.",
-    category: "Estimating Basics",
-    readTime: "6 min read",
-    icon: FileSpreadsheet,
-  },
-  {
-    title: "5 Bidding Mistakes That Cost Subcontractors Jobs",
-    excerpt: "From vague exclusions to late addenda, the avoidable errors that push good bids to second place.",
-    category: "Bidding Strategy",
-    readTime: "5 min read",
-    icon: ClipboardCheck,
-  },
-];

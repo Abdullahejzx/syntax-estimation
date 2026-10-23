@@ -2,7 +2,7 @@
 /**
  * Quote form endpoint for Syntax Estimation.
  *
- * Accepts POSTs from the website's forms (formType = full-quote | quick-quote | sample-request),
+ * Accepts POSTs from the website's forms (formType = full-quote | quick-quote | sample-request | newsletter),
  * validates and sanitizes them, stores uploaded plans in a private folder, emails the team a
  * summary with signed download links, and sends the visitor a confirmation.
  * Always answers with JSON: { ok, message?, reference?, errors? }.
@@ -76,7 +76,7 @@ if (!rate_limit_ok($uploadDir . '/.ratelimit', $rateKey, (int) $config['rate_lim
 // ---------------------------------------------------------------------------
 
 $formType = post('formType');
-if (!in_array($formType, ['full-quote', 'quick-quote', 'sample-request'], true)) {
+if (!in_array($formType, ['full-quote', 'quick-quote', 'sample-request', 'newsletter'], true)) {
     json_response(400, ['ok' => false, 'message' => 'Unknown form.']);
 }
 
@@ -108,7 +108,9 @@ $errors = [];
 if (!valid_email($s['email'])) {
     $errors['email'] = 'Enter a valid email address.';
 }
-if ($formType !== 'sample-request') {
+// Sample requests and newsletter sign-ups only need an email address
+$emailOnly = in_array($formType, ['sample-request', 'newsletter'], true);
+if (!$emailOnly) {
     if ($s['name'] === '') {
         $errors['name'] = 'Enter your name.';
     }
@@ -142,7 +144,7 @@ if ($formType === 'full-quote') {
 // ---------------------------------------------------------------------------
 
 $uploads = [];
-if ($formType !== 'sample-request' && isset($_FILES['files']) && is_array($_FILES['files']['name'] ?? null)) {
+if (!$emailOnly && isset($_FILES['files']) && is_array($_FILES['files']['name'] ?? null)) {
     $f = $_FILES['files'];
     $count = count($f['name']);
     $total = 0;

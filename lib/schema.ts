@@ -62,6 +62,39 @@ export function serviceSchema({ name, description, path, serviceType }: { name: 
   };
 }
 
+/** schema.org BlogPosting for blog articles. */
+export function articleSchema(post: {
+  title: string;
+  description: string;
+  path: string;
+  image: string;
+  date: string;
+  updated?: string;
+  author: string;
+  wordCount?: number;
+  category?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: absolute(post.image),
+    datePublished: post.date,
+    dateModified: post.updated ?? post.date,
+    author: { "@type": "Person", name: post.author },
+    publisher: {
+      "@type": "Organization",
+      "@id": absolute("/#business"),
+      name: siteConfig.name,
+      logo: { "@type": "ImageObject", url: absolute("/icon.svg") },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": absolute(post.path) },
+    articleSection: post.category,
+    wordCount: post.wordCount,
+  };
+}
+
 /** schema.org FAQPage built from the same items the accordion shows. */
 export function faqSchema(items: AccordionItem[]) {
   return {

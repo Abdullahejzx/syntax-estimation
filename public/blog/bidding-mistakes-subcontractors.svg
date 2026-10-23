@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Subcontractor bid review checklist with items marked">
+  <defs>
+    <pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="1200" height="675" fill="#12315a"/>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <rect x="300" y="60" width="600" height="560" rx="16" fill="#ffffff" transform="rotate(-3 600 340)"/>
+  <g transform="rotate(-3 600 340)" font-family="Arial, sans-serif">
+    <rect x="300" y="60" width="600" height="80" rx="16" fill="#f5f7fa"/>
+    <text x="340" y="110" font-size="26" font-weight="bold" fill="#0b2545">BID REVIEW CHECKLIST</text>
+    <g font-size="21" fill="#1a2433">
+      <rect x="340" y="180" width="30" height="30" rx="6" fill="#0b2545"/><path d="M347 195l7 7 12-14" stroke="#fff" stroke-width="4" fill="none"/><text x="390" y="203">Scope &amp; exclusions listed</text>
+      <rect x="340" y="250" width="30" height="30" rx="6" fill="#0b2545"/><path d="M347 265l7 7 12-14" stroke="#fff" stroke-width="4" fill="none"/><text x="390" y="273">All addenda acknowledged</text>
+      <rect x="340" y="320" width="30" height="30" rx="6" fill="none" stroke="#f28c28" stroke-width="3"/><text x="390" y="343">Risk priced, not padded</text>
+      <rect x="340" y="390" width="30" height="30" rx="6" fill="#0b2545"/><path d="M347 405l7 7 12-14" stroke="#fff" stroke-width="4" fill="none"/><text x="390" y="413">Submitted ahead of deadline</text>
+      <rect x="340" y="460" width="30" height="30" rx="6" fill="none" stroke="#f28c28" stroke-width="3"/><text x="390" y="483">Bid form &amp; alternates complete</text>
+    </g>
+    <path d="M340 540H860" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="340" y="580" font-size="18" fill="#4a5568">2 items need attention before submitting</text>
+  </g>
+  <g transform="rotate(8 980 200)">
+    <circle cx="980" cy="200" r="86" fill="none" stroke="#f28c28" stroke-width="6"/>
+    <circle cx="980" cy="200" r="72" fill="none" stroke="#f28c28" stroke-width="2"/>
+    <text x="980" y="194" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#f28c28" text-anchor="middle">REVIEW</text>
+    <text x="980" y="222" font-family="Arial, sans-serif" font-size="16" fill="#f28c28" text-anchor="middle">BEFORE BID DAY</text>
+  </g>
+</svg>
