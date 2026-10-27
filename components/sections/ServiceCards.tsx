@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, CircleCheck } from "lucide-react";
 import { serviceHref, services } from "@/content/services";
 import { Reveal } from "@/components/motion/Reveal";
+import { CardPhoto } from "@/components/ui/CardPhoto";
 import { Container } from "@/components/ui/Container";
 import { IconTile } from "@/components/ui/IconTile";
 import { Section } from "@/components/ui/Section";
@@ -23,27 +24,27 @@ export function ServiceCards({ title, intro }: { title: string; intro?: string }
             >
               <Link
                 href={serviceHref(service.slug)}
-                className="card-lift group relative flex h-full flex-col overflow-hidden rounded-xl border border-line bg-white p-6 shadow-card"
+                className="card-lift group relative flex h-full flex-col overflow-hidden rounded-xl border border-line bg-white shadow-card"
               >
-                <span
-                  aria-hidden="true"
-                  className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-blueprint transition-transform duration-300 group-hover:scale-x-100"
-                />
-                <IconTile icon={service.icon} className="mb-4" />
-                <h3 className="text-headline-md font-bold">{service.name}</h3>
-                <p className="mt-2 text-body-sm sm:text-body-md">{service.summary}</p>
-                <ul className="mt-4 space-y-2 text-body-sm text-ink">
-                  {service.highlights.map((h) => (
-                    <li key={h} className="flex items-start gap-2">
-                      <CircleCheck aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent-ink" />
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-                <span className="mt-auto inline-flex items-center gap-1 pt-6 font-display text-[0.9375rem] font-semibold text-navy transition-[gap] group-hover:gap-2">
-                  View service <span className="sr-only">: {service.name}</span>
-                  <ArrowRight aria-hidden="true" className="size-4" />
-                </span>
+                <CardPhoto image={`service-${service.slug}`}>
+                  <IconTile icon={service.icon} tone="accent" className="absolute bottom-3 left-4 shadow-card ring-2 ring-white" />
+                </CardPhoto>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-headline-md font-bold">{service.name}</h3>
+                  <p className="mt-2 text-body-sm sm:text-body-md">{service.summary}</p>
+                  <ul className="mt-4 space-y-2 text-body-sm text-ink">
+                    {service.highlights.map((h) => (
+                      <li key={h} className="flex items-start gap-2">
+                        <CircleCheck aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent-ink" />
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+                  <span className="mt-auto inline-flex items-center gap-1 pt-6 font-display text-[0.9375rem] font-semibold text-navy transition-[gap] group-hover:gap-2">
+                    View service <span className="sr-only">: {service.name}</span>
+                    <ArrowRight aria-hidden="true" className="size-4" />
+                  </span>
+                </div>
               </Link>
             </Reveal>
           ))}

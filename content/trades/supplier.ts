@@ -123,7 +123,7 @@ export const supplier: Trade = {
     ],
   },
   why: {
-    title: "Why Suppliers Choose Syntax",
+    title: "Why Suppliers Choose Arvex",
     points: [
       { title: "Your units, your products", text: "Quantities come in the units and lengths you stock and sell." },
       { title: "Quote before competitors", text: "Fast turnaround helps you respond while contractors are still collecting prices." },

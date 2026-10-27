@@ -27,12 +27,13 @@ export default function AboutPage() {
     <>
       <JsonLd data={localBusinessSchema()} />
       <PageHero
+        image="bg-about"
         breadcrumbs={[{ label: "About Us", href: "/about/" }]}
         tag={about.hero.tag}
         tagTone="accent"
         title={
           <>
-            {about.hero.titleStart} <span className="text-blueprint-ink">{about.hero.titleEnd}</span>
+            {about.hero.titleStart} <span className="text-accent">{about.hero.titleEnd}</span>
           </>
         }
         intro={about.hero.intro}

@@ -59,6 +59,14 @@ export type Service = {
     intro: string;
     highlights: { icon: LucideIcon; title: string; text: string }[];
   };
+  /** "Service overview" section under the hero: two paragraphs plus three short lists */
+  overview: {
+    title: string;
+    paragraphs: [string, string];
+    audiences: string[];
+    deliverables: string[];
+    software: string[];
+  };
   included: { title: string; intro: string; items: FeatureItem[] };
   stages: { eyebrow: string; title: string; intro: string; items: Stage[] };
   process: { title: string; intro: string; steps: { title: string; text: string }[]; zones: [MarkupZone, MarkupZone, MarkupZone] };
@@ -96,6 +104,22 @@ export const services: Service[] = [
         { icon: MapPin, title: "Local pricing", text: "Adjusted to your ZIP code" },
         { icon: RefreshCw, title: "Addenda included", text: "Updates until bid day" },
       ],
+    },
+    overview: {
+      title: "Detailed Cost Estimates You Can Bid With",
+      paragraphs: [
+        "A construction cost estimate is only useful if you can trust every line. Our estimators build each estimate from a full quantity takeoff of your drawings and specifications, then price materials, labor, equipment and subcontracted work using current costs for your project's location.",
+        "Estimates are organized by CSI MasterFormat division, so they drop straight into your bid forms, budgets or schedule of values. Every assumption, allowance and exclusion is written down, so your team knows exactly what is and isn't included before bid day.",
+      ],
+      audiences: ["General contractors", "Subcontractors", "Developers & owners", "Architects & engineers"],
+      deliverables: [
+        "Itemized estimate in unlocked Excel",
+        "Marked-up takeoff PDFs",
+        "Material, labor and equipment breakdown",
+        "Assumptions, allowances and exclusions",
+        "Bid summary by CSI division",
+      ],
+      software: ["Bluebeam Revu", "PlanSwift", "On-Screen Takeoff", "RSMeans data", "Microsoft Excel"],
     },
     included: {
       title: "What's Included in Every Cost Estimate",
@@ -340,6 +364,22 @@ export const services: Service[] = [
         { icon: FileSpreadsheet, title: "Editable Excel", text: "Live formulas, no locked cells" },
       ],
     },
+    overview: {
+      title: "Accurate Quantities for Every Trade",
+      paragraphs: [
+        "A quantity takeoff is the foundation of every bid. We measure your plans sheet by sheet (counts, lengths, areas and volumes) and organize the results by trade, system and location so you can price them your way.",
+        "Each takeoff comes with color-coded markups that show exactly what was counted, plus waste factors and net-to-gross conversions, so your estimators can check quantities in minutes instead of re-measuring.",
+      ],
+      audiences: ["Subcontractors", "General contractors", "Material suppliers", "In-house estimating teams"],
+      deliverables: [
+        "Quantity workbook in Excel",
+        "Color-coded marked-up PDFs",
+        "Waste factors and net-to-gross conversions",
+        "Quantities by floor, area or phase",
+        "Scope notes and questions on unclear items",
+      ],
+      software: ["Bluebeam Revu", "PlanSwift", "On-Screen Takeoff", "Microsoft Excel"],
+    },
     included: {
       title: "What's Included in Every Takeoff",
       intro: "Quantities you can price right away, organized the way your crews build.",
@@ -560,6 +600,22 @@ export const services: Service[] = [
         { icon: TrendingUp, title: "GMP support", text: "Budgets that roll into your GMP" },
       ],
     },
+    overview: {
+      title: "Cost Guidance From Concept to GMP",
+      paragraphs: [
+        "In design-build, the budget has to move with the design. We estimate at every milestone (concept, schematic design, design development and construction documents) so owners and project teams can make decisions while changes are still inexpensive.",
+        "We price system and material options side by side, track cost against the target budget, and reconcile each estimate with the last one so everyone can see what changed and why. The final estimate supports your guaranteed maximum price (GMP) proposal.",
+      ],
+      audiences: ["Design-build contractors", "Developers & owners", "Architects", "Construction managers"],
+      deliverables: [
+        "Milestone estimates from concept to CDs",
+        "Target-value budget tracking",
+        "Priced alternates and value engineering options",
+        "Estimate-to-estimate reconciliation",
+        "GMP support documents",
+      ],
+      software: ["Microsoft Excel", "Bluebeam Revu", "Autodesk Revit (model quantities)", "RSMeans data"],
+    },
     included: {
       title: "What's Included in Design-Build Estimating",
       intro: "Cost information your designers and owner can act on while choices are still open.",
@@ -761,24 +817,40 @@ export const services: Service[] = [
     name: "Drafting Services",
     shortName: "Drafting",
     summary:
-      "CAD drafting, as-built drawings, redline updates and permit sets prepared to your office standards.",
-    highlights: ["PDF and scan to CAD conversion", "As-built and redline updates", "Permit-ready drawing sets"],
+      "AutoCAD, Revit and BIM drafting, as-built drawings, redline updates and permit sets prepared to your office standards.",
+    highlights: ["AutoCAD, Revit and BIM modeling", "PDF and scan to CAD conversion", "As-built, redline and permit sets"],
     icon: PencilRuler,
     seo: {
-      title: "Construction Drafting & CAD Services",
+      title: "Construction Drafting, CAD, Revit & BIM Services",
       description:
-        "CAD drafting, PDF-to-CAD conversion, as-built drawings and permit sets for contractors, architects and developers, prepared to your standards.",
+        "AutoCAD and Revit drafting, BIM modeling, PDF-to-CAD conversion, as-built drawings and permit sets for contractors, architects and developers.",
     },
     hero: {
-      tag: "CAD & BIM drafting",
+      tag: "CAD, Revit & BIM drafting",
       title: "Drafting Services for Construction",
       intro:
-        "Clean, accurate drawings when you need them: CAD conversions, as-builts, redline updates and permit-ready sets prepared to your layer, title-block and sheet standards.",
+        "Clean, accurate drawings and models when you need them: AutoCAD and Revit drafting, BIM models, CAD conversions, as-builts, redline updates and permit-ready sets prepared to your layer, title-block and sheet standards.",
       highlights: [
-        { icon: PencilRuler, title: "AutoCAD & Revit", text: "Native DWG and RVT files" },
+        { icon: PencilRuler, title: "AutoCAD, Revit & BIM", text: "Native DWG and RVT files" },
         { icon: Stamp, title: "Permit-ready sets", text: "Formatted for plan review" },
         { icon: RefreshCw, title: "Fast redlines", text: "Markups turned into clean sheets" },
       ],
+    },
+    overview: {
+      title: "Drawings and BIM Models Prepared to Your Standards",
+      paragraphs: [
+        "Our drafting team prepares 2D drawings in AutoCAD and 3D models in Autodesk Revit for contractors, architects, engineers and developers. We convert PDFs and scans to CAD, turn field markups into clean as-builts, and assemble permit sets that are ready for plan review.",
+        "For BIM projects we build Revit models at the level of development your project needs, for clash coordination, quantity extraction, visualization or facility management, and deliver native files your team can keep working in.",
+      ],
+      audiences: ["Architects & engineers", "General contractors", "Developers & owners", "Facility managers"],
+      deliverables: [
+        "Native DWG and RVT files",
+        "PDF sheets of every drawing",
+        "Revit / BIM models (LOD 100–400)",
+        "As-built and redline-updated sets",
+        "Drawing list and revision log",
+      ],
+      software: ["AutoCAD", "Autodesk Revit", "Navisworks", "Autodesk Construction Cloud", "Bluebeam Revu"],
     },
     included: {
       title: "What's Included in Our Drafting Services",
@@ -814,8 +886,8 @@ export const services: Service[] = [
         },
         {
           icon: Cuboid,
-          title: "3D & BIM models",
-          text: "Revit models built from 2D drawings for coordination, visualization or quantity extraction.",
+          title: "Revit & BIM models",
+          text: "Revit models built from 2D drawings or point clouds for clash coordination, visualization, quantity extraction and as-built records.",
           metaLabel: "Revit RVT",
           metaValue: "Coordination-ready",
         },
@@ -932,6 +1004,11 @@ export const services: Service[] = [
           "We deliver native AutoCAD (DWG/DXF) or Revit (RVT) files plus PDFs of every sheet. Other formats are available on request.",
       },
       {
+        question: "Do you provide Revit and BIM modeling?",
+        answer:
+          "Yes. We build architectural, structural and MEP Revit models from 2D drawings, sketches or scans, at the level of development (LOD 100–400) your project needs. Models can be used for clash coordination in Navisworks, quantity extraction, renderings or as-built records, and are delivered as native RVT files plus IFC on request.",
+      },
+      {
         question: "Can you convert scanned or hand-drawn plans to CAD?",
         answer:
           "Yes. We redraw scans, PDFs and hand sketches as clean, layered CAD drawings, checking dimensions as we go and flagging anything that's unclear.",
@@ -982,6 +1059,22 @@ export const services: Service[] = [
         { icon: ListChecks, title: "Bar schedules", text: "Bending and cut lists" },
         { icon: FileCheck2, title: "Submittal-ready", text: "Formatted for EOR review" },
       ],
+    },
+    overview: {
+      title: "Shop Drawings Ready for the Fabrication Floor",
+      paragraphs: [
+        "We prepare reinforcing steel and structural steel shop drawings that fabricators can cut from and crews can install from: placing and erection drawings, assembly and piece drawings, bar bending schedules and connection details, all coordinated with the contract documents.",
+        "Every set is checked by a senior detailer before it goes out for approval, and engineer-of-record comments are turned around quickly so fabrication and deliveries stay on schedule.",
+      ],
+      audiences: ["Rebar fabricators", "Steel fabricators", "Erectors & installers", "General contractors"],
+      deliverables: [
+        "Rebar placing and steel erection drawings",
+        "Assembly and piece drawings",
+        "Bar bending schedules and bills of materials",
+        "NC/DXF files for fabrication on request",
+        "Approval and revision tracking",
+      ],
+      software: ["Tekla Structures", "AutoCAD", "Autodesk Revit", "RebarCAD", "Bluebeam Revu"],
     },
     included: {
       title: "What's Included in Our Detailing Services",

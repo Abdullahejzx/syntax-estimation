@@ -20,6 +20,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
+        image="bg-services"
         breadcrumbs={[{ label: "Services", href: "/services/" }]}
         tag={hub.hero.tag}
         title={hub.hero.title}

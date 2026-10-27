@@ -102,7 +102,7 @@ export const masonry: Trade = {
     ],
   },
   why: {
-    title: "Why Masonry Contractors Choose Syntax",
+    title: "Why Masonry Contractors Choose Arvex",
     points: [
       { title: "Accurate unit counts", text: "Openings are deducted and special units counted separately, so your order matches the wall." },
       { title: "Nothing hidden in the wall", text: "Grout, rebar, ties and flashing are measured, not guessed." },

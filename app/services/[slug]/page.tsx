@@ -16,6 +16,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { RelatedLinks } from "@/components/sections/RelatedLinks";
 import { SectorGrid } from "@/components/sections/SectorGrid";
+import { ServiceOverview } from "@/components/sections/ServiceOverview";
 import { StageCards } from "@/components/sections/StageCards";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ButtonLink } from "@/components/ui/Button";
@@ -46,6 +47,7 @@ export default async function ServicePage({ params }: Props) {
       <JsonLd data={serviceSchema({ name: service.name, description: service.seo.description, path })} />
 
       <PageHero
+        image={`service-${service.slug}`}
         breadcrumbs={[
           { label: "Services", href: "/services/" },
           { label: service.shortName, href: path },
@@ -75,6 +77,7 @@ export default async function ServicePage({ params }: Props) {
         }
       />
 
+      <ServiceOverview service={service} />
       <FeatureGrid
         id="included"
         tone="white"

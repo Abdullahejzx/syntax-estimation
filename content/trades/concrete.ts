@@ -118,7 +118,7 @@ export const concrete: Trade = {
     ],
   },
   why: {
-    title: "Why Concrete Bidders Choose Syntax",
+    title: "Why Concrete Bidders Choose Arvex",
     points: [
       { title: "Avoid over-ordering", text: "Waste factors set by element type prevent short loads without paying for extra yards." },
       { title: "Every bar counted", text: "Laps, hooks, dowels and chairs are included, so the fabricator's bill doesn't surprise you." },

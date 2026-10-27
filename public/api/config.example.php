@@ -15,31 +15,31 @@ return [
         'host'     => 'smtp.hostinger.com',
         'port'     => 465,          // 465 with 'ssl', or 587 with 'tls'
         'secure'   => 'ssl',        // 'ssl' or 'tls'
-        'username' => 'info@syntaxestimation.com',
+        'username' => 'info@arvexdesigns.net',
         'password' => 'CHANGE_ME',
     ],
 
     // "From" address on every email (normally the same mailbox as the SMTP username)
-    'from_email' => 'info@syntaxestimation.com',
-    'from_name'  => 'Syntax Estimation',
+    'from_email' => 'info@arvexdesigns.net',
+    'from_name'  => 'Arvex Designs',
 
     // Who receives new quote requests (one or more addresses)
-    'notify_to' => ['info@syntaxestimation.com'],
+    'notify_to' => ['info@arvexdesigns.net'],
 
     // Shown in the confirmation email sent to the visitor
     'company' => [
-        'name'    => 'Syntax Estimation',
+        'name'    => 'Arvex Designs',
         'phone'   => '(201) 555-0148',
-        'email'   => 'info@syntaxestimation.com',
-        'website' => 'https://www.syntaxestimation.com',
+        'email'   => 'info@arvexdesigns.net',
+        'website' => 'https://www.arvexdesigns.net',
     ],
 
     // Public site address, used to build file download links (no trailing slash)
-    'base_url' => 'https://www.syntaxestimation.com',
+    'base_url' => 'https://www.arvexdesigns.net',
 
     // Where uploaded plans are stored. The default is OUTSIDE public_html (one level up),
     // so files can never be opened directly from the web. Must be writable by PHP.
-    'upload_dir' => dirname(__DIR__, 2) . '/syntax-uploads',
+    'upload_dir' => dirname(__DIR__, 2) . '/arvex-uploads',
 
     // Secret used to sign download links. Use 64+ random characters, e.g. from
     // https://www.random.org/strings/ or `openssl rand -hex 32`. Changing it breaks old links.
@@ -62,8 +62,8 @@ return [
 
     // Only accept submissions from these origins (leave empty to skip the check)
     'allowed_origins' => [
-        'https://www.syntaxestimation.com',
-        'https://syntaxestimation.com',
+        'https://www.arvexdesigns.net',
+        'https://arvexdesigns.net',
     ],
 
     // Optional: absolute path to a sample estimate PDF attached to sample-request confirmations

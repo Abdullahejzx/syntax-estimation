@@ -1,6 +1,6 @@
-# Syntax Estimation website
+# Arvex Designs website
 
-Marketing site for Syntax Estimation, a construction cost estimating company based in New Jersey that serves contractors in all 50 states.
+Marketing site for Arvex Designs, a construction cost estimating company based in New Jersey that serves contractors in all 50 states.
 
 Built with Next.js (App Router, static export), TypeScript, Tailwind CSS v4 and Framer Motion. `npm run build` produces plain HTML, CSS and JavaScript in `out/`, which runs on Hostinger shared hosting with no Node server. Every form posts to a small PHP script that ships in the same folder.
 
@@ -13,6 +13,7 @@ Before launch, work through [LAUNCH-CHECKLIST.md](LAUNCH-CHECKLIST.md): every pl
 - [Change contact info](#change-contact-info)
 - [Add a blog post](#add-a-blog-post)
 - [Add a service or trade](#add-a-service-or-trade)
+- [Photos](#photos)
 - [Social share images](#social-share-images)
 - [Set up email (SMTP)](#set-up-email-smtp)
 - [Deploy to Hostinger](#deploy-to-hostinger)
@@ -113,6 +114,14 @@ New author? Add them to `content/authors.ts` with a name, role and short bio.
 
 Menus, hub pages, the footer, the sitemap and share images pick up new entries automatically.
 
+## Photos
+
+The construction photos (hero backgrounds, the Home slider, service and trade cards, the CTA banner) are free stock photos from [Unsplash](https://unsplash.com/license), which allows commercial use without attribution. They live in `public/images/` in two sizes: `<key>-lg.webp` (1600px, backgrounds) and `<key>-sm.webp` (800px, cards).
+
+- **Which photo goes where:** `content/images.json` maps each key to an Unsplash photo id and alt text. Service pages use `service-<slug>`, trade pages `trade-<slug>`, and the hubs, About, Quote and banners use `bg-*`. The Home slider uses `hero-*`, and its slides are listed in `content/home.ts` (`heroSlides`).
+- **Swap a stock photo:** find one on unsplash.com, copy the `photo-…` id from its image URL into `content/images.json`, then run `npm run images -- --force` to download and resize it.
+- **Use the client's own photo:** save it as a WebP in `public/images/` under the same two names (for example `trade-concrete-lg.webp` at 1600 × 900 and `trade-concrete-sm.webp` at 800 × 520) and update the alt text in `content/images.json`.
+
 ## Social share images
 
 Every page has a 1200 × 630 PNG for link previews on LinkedIn, Facebook, X, iMessage, Slack and so on. The images are drawn at build time from the site's own content by `app/og/[...image]/route.tsx`, using the layout in `components/seo/OgImage.tsx` (navy background, blueprint grid, orange accent, logo and page title). The build writes them to:
@@ -132,7 +141,7 @@ After launch, you can check how a link will look with LinkedIn's [Post Inspector
 
 The forms (quote wizard, quick quote, sample request, newsletter) post to `/api/quote.php`. That script emails the team a summary with secure download links for uploaded plans, and sends the visitor a confirmation. It sends mail through PHPMailer over SMTP.
 
-1. **Create the mailbox.** In Hostinger hPanel, go to **Emails** and create the address that will send mail, for example `info@syntaxestimation.com`. Under that mailbox's **Configuration** (or "Connect apps & devices"), note the SMTP host, port and encryption. For Hostinger these are usually `smtp.hostinger.com`, port `465`, SSL.
+1. **Create the mailbox.** In Hostinger hPanel, go to **Emails** and create the address that will send mail, for example `info@arvexdesigns.net`. Under that mailbox's **Configuration** (or "Connect apps & devices"), note the SMTP host, port and encryption. For Hostinger these are usually `smtp.hostinger.com`, port `465`, SSL.
 2. **Create `config.php`.** Copy `public/api/config.example.php` to `config.php` and fill in:
    - `smtp.username` and `smtp.password`: the mailbox login.
    - `from_email` and `from_name`: normally the same mailbox.
@@ -145,7 +154,7 @@ The forms (quote wizard, quick quote, sample request, newsletter) post to `/api/
 4. **Check deliverability.** In hPanel under **Emails > Domain settings** (or the DNS zone), make sure SPF, DKIM and DMARC are set up so the emails don't land in spam.
 5. **Test.** Submit each form on the live site. If something fails, temporarily set `'debug' => true` in `config.php` to see the technical error in the form response, then set it back to `false`.
 
-Uploaded plans are stored in `syntax-uploads/`, one level above `public_html`, so they can never be opened directly. The PHP limits for 100 MB uploads are in `public/api/.user.ini`. If large uploads still fail, set the same values in hPanel under **Advanced > PHP Configuration**.
+Uploaded plans are stored in `arvex-uploads/`, one level above `public_html`, so they can never be opened directly. The PHP limits for 100 MB uploads are in `public/api/.user.ini`. If large uploads still fail, set the same values in hPanel under **Advanced > PHP Configuration**.
 
 ## Deploy to Hostinger
 
@@ -179,7 +188,7 @@ Uploaded plans are stored in `syntax-uploads/`, one level above `public_html`, s
 
 ## After launch: SEO and performance
 
-- **Google Search Console:** add the domain, verify it (DNS record in hPanel) and submit `https://www.syntaxestimation.com/sitemap.xml`. Bing Webmaster Tools can import the same settings.
+- **Google Search Console:** add the domain, verify it (DNS record in hPanel) and submit `https://www.arvexdesigns.net/sitemap.xml`. Bing Webmaster Tools can import the same settings.
 - **Google Business Profile:** use exactly the same name, address and phone as `config/site.ts`.
 - **Structured data:** check a few pages in Google's [Rich Results Test](https://search.google.com/test/rich-results). The site includes LocalBusiness, Service, FAQPage, BlogPosting and BreadcrumbList schema.
 - **Performance:** measure the live site with [PageSpeed Insights](https://pagespeed.web.dev/). Lighthouse on a slow or busy laptop under-reports mobile scores (it says so in a warning at the top of the report), so trust PageSpeed's numbers. What's already in place:

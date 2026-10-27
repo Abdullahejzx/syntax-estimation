@@ -158,3 +158,13 @@
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
+
+/* Home hero slider: progress bar that fills while a slide is showing */
+@keyframes hero-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -102,7 +102,7 @@ export const drywall: Trade = {
     ],
   },
   why: {
-    title: "Why Drywall Contractors Choose Syntax",
+    title: "Why Drywall Contractors Choose Arvex",
     points: [
       { title: "Sheets, not just square feet", text: "Board is converted into sheet counts by length, so stocking orders are ready." },
       { title: "Every wall type tagged", text: "Partition types are color-coded on the plans, so you can see what each one costs." },

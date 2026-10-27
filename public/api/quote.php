@@ -1,6 +1,6 @@
 <?php
 /**
- * Quote form endpoint for Syntax Estimation.
+ * Quote form endpoint for Arvex Designs.
  *
  * Accepts POSTs from the website's forms (formType = full-quote | quick-quote | sample-request | newsletter),
  * validates and sanitizes them, stores uploaded plans in a private folder, emails the team a

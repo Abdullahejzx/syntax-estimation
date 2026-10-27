@@ -1,0 +1,32 @@
+{
+  "_note": "Photos from Unsplash (free Unsplash License: commercial use, no attribution required). Downloaded and resized by `npm run images`, which saves public/images/<key>-lg.webp (1600px) and <key>-sm.webp (800px). To swap a photo, change its id here and run the script again.",
+  "hero-estimating": { "id": "photo-1608303588026-884930af2559", "alt": "Estimators reviewing architectural blueprints on a desk" },
+  "hero-takeoff": { "id": "photo-1503387837-b154d5074bd2", "alt": "Hand marking quantities on a construction blueprint" },
+  "hero-design-build": { "id": "photo-1599707254554-027aeb4deacd", "alt": "Tower cranes above a high-rise under construction" },
+  "hero-drafting": { "id": "photo-1764740109279-c7a8abd78821", "alt": "Desk with a laptop, drawings and drafting tools" },
+
+  "service-cost-estimating": { "id": "photo-1581094488379-6a10d04c0f04", "alt": "Two engineers in uniforms reviewing printed project plans" },
+  "service-quantity-takeoffs": { "id": "photo-1762146828422-50a8bd416d3c", "alt": "Architectural blueprints spread out for a quantity takeoff" },
+  "service-design-build": { "id": "photo-1527335988388-b40ee248d80c", "alt": "Steel building frame rising next to a tower crane" },
+  "service-drafting": { "id": "photo-1503387762-592deb58ef4e", "alt": "Architect drafting a drawing with a pencil and ruler" },
+  "service-structural-detailing-shop-drawings": { "id": "photo-1509024368907-57294758cfc5", "alt": "Structural steel frame of a building under construction" },
+
+  "trade-concrete": { "id": "photo-1774931363306-5a896cd4dd02", "alt": "Construction workers pouring concrete on site" },
+  "trade-masonry": { "id": "photo-1585750629386-33bdc1431574", "alt": "Close-up of a laid brick masonry wall" },
+  "trade-metal": { "id": "photo-1724814884431-5f931c9620ae", "alt": "Inside a structural steel frame" },
+  "trade-drywall": { "id": "photo-1768321914149-5a6428ec2f82", "alt": "Interior with metal stud framing and drywall panels" },
+  "trade-insulation": { "id": "photo-1789577759972-9e5b9134f72d", "alt": "Fiberglass insulation installed between roof rafters" },
+  "trade-painting": { "id": "photo-1693985120993-e9b203ce7631", "alt": "Paint roller applying a coat of paint to a wall" },
+  "trade-flooring": { "id": "photo-1624574470112-46944be68409", "alt": "Installer laying new flooring in an empty room" },
+  "trade-electrical": { "id": "photo-1621905251189-08b45d6a269e", "alt": "Electrician in a hard hat installing wiring" },
+  "trade-plumbing": { "id": "photo-1768321913920-d3ac011e0683", "alt": "Plumbing pipes and conduit installed in an open wall" },
+  "trade-general-contractor": { "id": "photo-1504307651254-35680f356dfd", "alt": "Two construction workers on a building site" },
+  "trade-supplier": { "id": "photo-1637241612956-b7309005288b", "alt": "Shelves stocked with building material samples" },
+
+  "bg-services": { "id": "photo-1723107638733-16ef49e5d4de", "alt": "Aerial view of a construction site with a crane" },
+  "bg-trades": { "id": "photo-1713593930871-e21d7f9ef4a1", "alt": "Construction workers on scaffolding" },
+  "bg-about": { "id": "photo-1694521787162-5373b598945c", "alt": "Project team standing on a construction site" },
+  "bg-quote": { "id": "photo-1764740093413-0faeb443f764", "alt": "Hands holding glasses over design blueprints" },
+  "bg-blog": { "id": "photo-1542621334-a254cf47733d", "alt": "Pencil resting on a printed construction drawing" },
+  "bg-cta": { "id": "photo-1758399750112-366c3c804eb7", "alt": "Construction cranes silhouetted against an orange sunset" }
+}

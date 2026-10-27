@@ -8,13 +8,13 @@ To find any that are left: search the project for `TODO`.
 
 These appear in the header, footer, mobile call bar, contact page, map, legal pages and Google schema.
 
-- [ ] Legal business name (currently "Syntax Estimation LLC")
-- [ ] Production domain (currently `https://www.syntaxestimation.com`). If it changes, also update `public/.htaccess` (www redirect) and `base_url` / `allowed_origins` in `public/api/config.php`.
+- [ ] Legal business name (currently "Arvex Designs LLC")
+- [ ] Production domain (currently `https://www.arvexdesigns.net`). If it changes, also update `public/.htaccess` (www redirect) and `base_url` / `allowed_origins` in `public/api/config.php`.
 - [ ] Phone number (dummy: `(201) 555-0148`) and its `phoneHref`
-- [ ] Email address (`info@syntaxestimation.com`)
+- [ ] Email address (`info@arvexdesigns.net` is assumed from the new domain; confirm the real mailbox)
 - [ ] Office address (dummy: 100 Example Street, Suite 200, Newark, NJ 07102). It drives the map on the contact page.
 - [ ] Business hours (`hours`, `hoursDetail`) and the matching `openingHours` for Google
-- [ ] LinkedIn, X and YouTube profile URLs (currently the bare sites). Set unused ones to `""`.
+- [ ] LinkedIn, Facebook and YouTube profile URLs (the client will share them; currently the bare sites). Set unused ones to `""`.
 
 ## 2. Email backend: `public/api/config.php` (on the server only)
 
@@ -27,7 +27,8 @@ These appear in the header, footer, mobile call bar, contact page, map, legal pa
 
 ## 3. Brand
 
-- [ ] Real logo: `components/layout/Logo.tsx` (placeholder "S" mark plus wordmark). Also replace `app/icon.svg` (favicon) and the logo inside `components/seo/OgImage.tsx` (share images).
+- [ ] Photos: the site uses free Unsplash stock photos (see `content/images.json`). Swap in the client's own project photos where they have them (README: "Photos").
+- [ ] Real logo: `components/layout/Logo.tsx` (placeholder "A" mark plus the "Arvex Designs" wordmark). Also replace `app/icon.svg` (favicon) and the logo inside `components/seo/OgImage.tsx` (share images).
 
 ## 4. Proof: stats and testimonials
 
@@ -50,7 +51,7 @@ These appear in the header, footer, mobile call bar, contact page, map, legal pa
 
 ## 7. Blog: `content/authors.ts` and `content/blog/`
 
-- [ ] Author "Daniel Brooks, Founder & Chief Estimator" is a placeholder person with an invented bio. Replace him with the real author, or change the posts to "Syntax Estimation Team".
+- [ ] Author "Daniel Brooks, Founder & Chief Estimator" is a placeholder person with an invented bio. Replace him with the real author, or change the posts to "Arvex Designs Team".
 - [ ] Read the 3 sample posts and confirm the client is happy to publish them under their name, including dates and claims.
 - [ ] Blog post sidebar claim "24–72 hour typical turnaround": `app/blog/[slug]/page.tsx`
 

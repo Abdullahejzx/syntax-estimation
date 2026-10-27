@@ -16,6 +16,7 @@ export default function GetAQuotePage() {
     <>
       <JsonLd data={localBusinessSchema()} />
       <PageHero
+        image="bg-quote"
         breadcrumbs={[{ label: "Get a Quote", href: "/get-a-quote/" }]}
         tag={quotePage.hero.tag}
         tagTone="accent"

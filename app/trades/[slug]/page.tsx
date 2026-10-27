@@ -49,6 +49,7 @@ export default async function TradePage({ params }: Props) {
       <JsonLd data={serviceSchema({ name: trade.name, description: trade.seo.description, path })} />
 
       <PageHero
+        image={`trade-${trade.slug}`}
         breadcrumbs={[
           { label: "Trades", href: "/trades/" },
           { label: trade.shortName, href: path },
@@ -80,7 +81,7 @@ export default async function TradePage({ params }: Props) {
       {trade.pricing && <PricingPillars data={trade.pricing} tradeName={label} />}
       <WorkflowCards data={trade.workflows} />
       <AdvantageSplit
-        eyebrow="Why Syntax"
+        eyebrow="Why Arvex"
         numbered
         title={trade.why.title}
         points={trade.why.points}

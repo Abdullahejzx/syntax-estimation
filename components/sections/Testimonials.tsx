@@ -18,7 +18,7 @@ export function Testimonials({
   items,
   eyebrow = "Client feedback",
   title = "Trusted by General & Trade Contractors",
-  intro = "How construction teams use Syntax Estimation to bid more work with the people they already have.",
+  intro = "How construction teams use Arvex Designs to bid more work with the people they already have.",
   tone = "white",
 }: TestimonialsProps) {
   return (

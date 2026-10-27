@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = Number((await params).page);
   return {
     title: `Construction Estimating Blog – Page ${page}`,
-    description: "More construction cost guides, takeoff checklists and bidding strategies from Syntax Estimation.",
+    description: "More construction cost guides, takeoff checklists and bidding strategies from Arvex Designs.",
     alternates: { canonical: page === 1 ? "/blog/" : `/blog/page/${page}/` },
   };
 }

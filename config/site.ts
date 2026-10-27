@@ -5,7 +5,7 @@
  */
 
 // TODO: confirm production domain
-export const productionUrl = "https://www.syntaxestimation.com";
+export const productionUrl = "https://www.arvexdesigns.net";
 
 // Set only by the GitHub Pages preview build (.github/workflows/preview.yml). The normal
 // Hostinger build leaves them empty: site at the domain root, forms switched on.
@@ -13,8 +13,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 export const isPreview = process.env.NEXT_PUBLIC_PREVIEW === "true";
 
 export const siteConfig = {
-  name: "Syntax Estimation",
-  legalName: "Syntax Estimation LLC", // TODO: confirm registered business name
+  name: "Arvex Designs",
+  legalName: "Arvex Designs LLC", // TODO: confirm registered business name
   tagline: "Construction cost estimating and quantity takeoffs for contractors in all 50 states.",
   /** Where the site is served from (the preview's GitHub Pages address, or the real domain) */
   url: process.env.NEXT_PUBLIC_SITE_URL || productionUrl,
@@ -24,7 +24,7 @@ export const siteConfig = {
   // TODO: replace dummy contact details with real ones
   phone: "(201) 555-0148",
   phoneHref: "tel:+12015550148",
-  email: "info@syntaxestimation.com",
+  email: "info@arvexdesigns.net",
   address: {
     street: "100 Example Street, Suite 200",
     city: "Newark",
@@ -32,16 +32,16 @@ export const siteConfig = {
     postalCode: "07102",
     country: "US",
   },
-  hours: "Mon–Sat, all US time zones",
+  hours: "Mon–Fri, all US time zones",
   // TODO: confirm business hours
-  hoursDetail: ["Mon–Fri: 8:00 AM – 6:00 PM ET", "Sat: 9:00 AM – 2:00 PM ET"],
+  hoursDetail: ["Mon–Fri: 8:00 AM – 6:00 PM ET", "Sat–Sun: Closed"],
   // Machine-readable hours for schema.org (TODO: confirm)
-  openingHours: ["Mo-Fr 08:00-18:00", "Sa 09:00-14:00"],
+  openingHours: ["Mo-Fr 08:00-18:00"],
 
-  // TODO: replace with real profile URLs, or set to "" to hide an icon
+  // TODO: the client will share the real profile URLs. Set one to "" to hide its icon.
   social: {
     linkedin: "https://www.linkedin.com/",
-    x: "https://x.com/",
+    facebook: "https://www.facebook.com/",
     youtube: "https://www.youtube.com/",
   },
 

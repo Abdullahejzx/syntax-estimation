@@ -4,6 +4,8 @@ import { quoteHref } from "@/content/navigation";
 import { serviceHref, services } from "@/content/services";
 import { Reveal } from "@/components/motion/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
+import { CardPhoto } from "@/components/ui/CardPhoto";
+import { PhotoBackdrop } from "@/components/ui/PhotoBackdrop";
 import { Container } from "@/components/ui/Container";
 import { IconTile } from "@/components/ui/IconTile";
 import { Section } from "@/components/ui/Section";
@@ -24,22 +26,26 @@ export function ServicesGrid() {
             <Reveal as="li" key={service.slug} delay={i * 0.06}>
               <Link
                 href={serviceHref(service.slug)}
-                className="card-lift group flex h-full flex-col rounded-lg border border-line bg-white p-6 shadow-card"
+                className="card-lift group flex h-full flex-col overflow-hidden rounded-lg border border-line bg-white shadow-card"
               >
-                <IconTile icon={service.icon} className="mb-4" />
-                <h3 className="mb-2 text-headline-md font-bold">{service.name}</h3>
-                <p className="text-body-sm sm:text-body-md">{service.summary}</p>
-                <span className="mt-6 inline-flex items-center gap-1 font-display text-[0.875rem] font-semibold text-accent-ink transition-[gap] group-hover:gap-2">
-                  Learn more <span className="sr-only">about {service.name}</span>
-                  <ArrowRight aria-hidden="true" className="size-4" />
-                </span>
+                <CardPhoto image={`service-${service.slug}`}>
+                  <IconTile icon={service.icon} tone="accent" className="absolute bottom-3 left-4 shadow-card ring-2 ring-white" />
+                </CardPhoto>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="mb-2 text-headline-md font-bold">{service.name}</h3>
+                  <p className="text-body-sm sm:text-body-md">{service.summary}</p>
+                  <span className="mt-auto inline-flex items-center gap-1 pt-6 font-display text-[0.875rem] font-semibold text-accent-ink transition-[gap] group-hover:gap-2">
+                    Learn more <span className="sr-only">about {service.name}</span>
+                    <ArrowRight aria-hidden="true" className="size-4" />
+                  </span>
+                </div>
               </Link>
             </Reveal>
           ))}
           {/* Sixth tile completes the 3x2 / 2x3 grid */}
           <Reveal as="li" delay={0.3}>
             <div className="relative flex h-full flex-col overflow-hidden rounded-lg bg-navy p-6 text-navy-200 shadow-card">
-              <div aria-hidden="true" className="bg-blueprint-grid-light absolute inset-0" />
+              <PhotoBackdrop image="bg-quote" fade="even" />
               <div className="relative flex h-full flex-col items-start">
                 <h3 className="mb-2 text-headline-md font-bold text-white">Not sure which service fits?</h3>
                 <p className="text-body-sm sm:text-body-md">

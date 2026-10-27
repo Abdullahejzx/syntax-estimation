@@ -102,7 +102,7 @@ export const painting: Trade = {
     ],
   },
   why: {
-    title: "Why Painting Contractors Choose Syntax",
+    title: "Why Painting Contractors Choose Arvex",
     points: [
       { title: "Driven by the finish schedule", text: "Every room's finishes come from the schedule, not assumptions." },
       { title: "Heights included", text: "Wall heights and exposed ceilings are measured from sections, where bids are often won or lost." },

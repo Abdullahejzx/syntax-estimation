@@ -132,7 +132,7 @@ export const generalContractor: Trade = {
     ],
   },
   why: {
-    title: "Why General Contractors Choose Syntax",
+    title: "Why General Contractors Choose Arvex",
     points: [
       { title: "A baseline for every trade", text: "Know what each sub bid should cost before the numbers come in." },
       { title: "Scope gaps closed", text: "Leveling sheets show what each sub included and excluded." },

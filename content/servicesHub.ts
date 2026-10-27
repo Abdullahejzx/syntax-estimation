@@ -67,10 +67,10 @@ export const servicesHub = {
     intro: "We set up quantities and sheet layouts to match how each type of contractor prices and builds.",
   },
   comparison: {
-    title: "In-House Estimating vs. Syntax Estimation",
+    title: "In-House Estimating vs. Arvex Designs",
     intro: "How outsourcing compares with adding another full-time estimator to your payroll.",
     themLabel: "In-house estimator",
-    usLabel: "Syntax Estimation",
+    usLabel: "Arvex Designs",
     // TODO: confirm comparison claims, especially turnaround and capacity
     rows: [
       {

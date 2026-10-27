@@ -31,18 +31,40 @@ export const heroStats = [
   { value: "All 50", label: "US states covered", highlight: false },
 ];
 
-// Illustrative numbers for the hero's sample takeoff card (not a real project).
-export const heroEstimate = {
-  project: "Mixed-Use Building, Phase 1",
-  lines: [
-    { label: "Div 03 · Cast-in-Place Concrete", amount: "$418,290", qty: "1,420 CY" },
-    { label: "Div 05 · Structural Steel", amount: "$684,150", qty: "312 TON" },
-    { label: "Div 09 · Drywall & Ceilings", amount: "$295,400", qty: "48.2k SF" },
-    { label: "Div 26 · Electrical", amount: "$522,800", qty: "Full scope" },
-  ],
-  total: "$1,920,640",
-  turnaround: "Delivered in 36 hours",
-};
+/**
+ * Hero slider: each slide swaps the background photo and the service spotlight.
+ * `image` is a key in content/images.json. Add, remove or reorder slides here.
+ */
+export const heroSlides: { image: string; label: string; title: string; text: string; href: string }[] = [
+  {
+    image: "hero-estimating",
+    label: "Cost Estimating",
+    title: "Bid-ready cost estimates from your plans",
+    text: "Material, labor and equipment priced for your project's ZIP code and delivered in an unlocked Excel workbook.",
+    href: "/services/cost-estimating/",
+  },
+  {
+    image: "hero-takeoff",
+    label: "Quantity Takeoffs",
+    title: "Every quantity counted, marked up and checked",
+    text: "Trade-by-trade takeoffs with waste factors and color-coded PDFs you can verify in minutes.",
+    href: "/services/quantity-takeoffs/",
+  },
+  {
+    image: "hero-design-build",
+    label: "Design-Build",
+    title: "Budgets that keep pace with the design",
+    text: "Concept, target-value and GMP estimates that track cost as the drawings develop.",
+    href: "/services/design-build/",
+  },
+  {
+    image: "hero-drafting",
+    label: "Drafting & BIM",
+    title: "AutoCAD, Revit and BIM drafting",
+    text: "Permit sets, as-builts, redline updates and Revit models prepared to your office standards.",
+    href: "/services/drafting/",
+  },
+];
 
 // ---------------------------------------------------------------------------
 // Software strip
@@ -71,6 +93,7 @@ export const audiences = [
     listLabel: "What you get",
     list: ["Conceptual and schematic budgets", "Full CSI MasterFormat estimates", "Sub bid leveling sheets", "Change order reviews"],
     href: "/trades/general-contractor/",
+    image: "trade-general-contractor",
     featured: false,
   },
   {
@@ -83,6 +106,7 @@ export const audiences = [
     list: [], // filled from content/trades.ts
     href: "/trades/",
     featured: true,
+    image: "trade-electrical",
   },
   {
     tag: "Role 03",
@@ -93,6 +117,7 @@ export const audiences = [
     listLabel: "Typical outputs",
     list: ["Lumber and framing counts", "Rebar and steel lists", "Pipe and conduit runs", "Fixture and equipment schedules"],
     href: "/trades/supplier/",
+    image: "trade-supplier",
     featured: false,
   },
 ];

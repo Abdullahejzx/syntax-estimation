@@ -102,7 +102,7 @@ export const electrical: Trade = {
     ],
   },
   why: {
-    title: "Why Electrical Contractors Choose Syntax",
+    title: "Why Electrical Contractors Choose Arvex",
     points: [
       { title: "Every device counted", text: "Symbols are counted sheet by sheet and tied to their panel." },
       { title: "Wire from real runs", text: "Conductor lengths come from homerun distances and circuit layouts, not rules of thumb." },

@@ -102,7 +102,7 @@ export const flooring: Trade = {
     ],
   },
   why: {
-    title: "Why Flooring Contractors Choose Syntax",
+    title: "Why Flooring Contractors Choose Arvex",
     points: [
       { title: "Pattern waste done right", text: "Waste is set by product and layout, so herringbone isn't priced like straight lay." },
       { title: "Base and transitions included", text: "Every room perimeter and doorway is measured, not estimated." },

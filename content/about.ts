@@ -22,12 +22,12 @@ import {
 /** Copy for the /about page. Stats and testimonials come from content/proof.ts. */
 export const about = {
   seo: {
-    title: "About Syntax Estimation",
+    title: "About Arvex Designs",
     description:
-      "Syntax Estimation is a New Jersey construction estimating firm founded in 2026 by estimators with 60+ years of combined field and preconstruction experience.",
+      "Arvex Designs is a New Jersey construction estimating firm founded in 2026 by estimators with 60+ years of combined field and preconstruction experience.",
   },
   hero: {
-    tag: "About Syntax Estimation",
+    tag: "About Arvex Designs",
     titleStart: "Estimators Who Think",
     titleEnd: "Like Contractors",
     intro:
@@ -41,14 +41,14 @@ export const about = {
     // TODO: replace with the founders' real story
     paragraphs: [
       "Our founders spent years as estimators and project managers on commercial job sites, watching capable contractors lose bids because the numbers were slow, padded or simply wrong. Outside estimating services were either too far removed from field conditions or took weeks to return basic quantities.",
-      "In 2026 we started Syntax Estimation to close that gap: fast, transparent estimates built on local pricing, delivered in unlocked spreadsheets with marked-up plans, so builders can submit bids with confidence.",
+      "In 2026 we started Arvex Designs to close that gap: fast, transparent estimates built on local pricing, delivered in unlocked spreadsheets with marked-up plans, so builders can submit bids with confidence.",
     ],
     badges: [
       { icon: ShieldCheck, text: "US-based team" },
       { icon: FileSpreadsheet, text: "Unlocked formulas" },
     ],
     card: {
-      title: "Why We Started Syntax",
+      title: "Why We Started Arvex",
       items: [
         { icon: Zap, title: "Faster turnaround", text: "Delivery in 24 to 72 hours, so you don't miss a bid deadline or an addendum." },
         { icon: Eye, title: "Transparent assumptions", text: "Unlocked Excel workbooks with visible formulas. No black-box pricing." },

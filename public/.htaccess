@@ -21,8 +21,8 @@ ErrorDocument 404 /404.html
     # Send the bare domain to www. Only matches the real domain, so Hostinger's
     # temporary preview domain keeps working.
     # TODO: if the production domain changes, update it here and in config/site.ts
-    RewriteCond %{HTTP_HOST} ^syntaxestimation\.com$ [NC]
-    RewriteRule ^ https://www.syntaxestimation.com%{REQUEST_URI} [L,R=301]
+    RewriteCond %{HTTP_HOST} ^arvexdesigns\.net$ [NC]
+    RewriteRule ^ https://www.arvexdesigns.net%{REQUEST_URI} [L,R=301]
 
     # (Apache's DirectorySlash already redirects /about to /about/, the canonical URL.)
 </IfModule>

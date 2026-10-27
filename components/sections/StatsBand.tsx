@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 /** Navy band of big counting numbers. 2 columns on phones, 4 on desktop. */
 export function StatsBand({
   stats,
-  label = "Syntax Estimation by the numbers",
+  label = "Arvex Designs by the numbers",
   note,
 }: {
   stats: Stat[];

@@ -66,11 +66,11 @@ export function OgImage({ eyebrow, title, subtitle }: OgCard) {
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <svg width="60" height="60" viewBox="0 0 32 32">
             <rect width="32" height="32" rx="7" fill="#ffffff" />
-            <path d="M23 10.5H9.5v5.5h13v5.5H9" fill="none" stroke={navy} strokeWidth="2.4" strokeLinecap="square" />
-            <circle cx="23" cy="21.5" r="2.2" fill={accent} />
+            <path d="M8.5 24 16 8.5 23.5 24" fill="none" stroke={navy} strokeWidth="2.6" strokeLinejoin="miter" />
+            <path d="M11.6 18.5h8.8" stroke={accent} strokeWidth="2.6" />
           </svg>
           <div style={{ display: "flex", fontFamily: "Manrope", fontSize: 34, fontWeight: 800, letterSpacing: -0.5 }}>
-            Syntax<span style={{ fontWeight: 600, marginLeft: 9 }}>Estimation</span>
+            Arvex<span style={{ fontWeight: 600, marginLeft: 9 }}>Designs</span>
           </div>
         </div>
         <div

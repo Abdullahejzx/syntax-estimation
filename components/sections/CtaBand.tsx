@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 import { quoteHref } from "@/content/navigation";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { PhotoBackdrop } from "@/components/ui/PhotoBackdrop";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 
 type CtaBandProps = {
@@ -19,7 +20,7 @@ const assurances = [
   { icon: Clock, text: "Fixed price before we start" },
 ];
 
-/** Closing navy call-to-action band used at the bottom of most pages. */
+/** Closing call-to-action band used at the bottom of most pages, over a construction photo. */
 export function CtaBand({
   eyebrow = "Start estimating today",
   title = "Ready to Win Your Next Bid?",
@@ -28,11 +29,7 @@ export function CtaBand({
 }: CtaBandProps) {
   return (
     <section aria-labelledby="cta-title" className="relative overflow-hidden bg-navy py-16 text-navy-200 lg:py-24">
-      <div aria-hidden="true" className="bg-blueprint-grid-light pointer-events-none absolute inset-0" />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-24 -left-24 size-96 rounded-full bg-blueprint opacity-25 blur-3xl"
-      />
+      <PhotoBackdrop image="bg-cta" fade="even" />
       <Container size="narrow" className="relative text-center">
         <Eyebrow inverted className="mb-3">
           {eyebrow}

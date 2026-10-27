@@ -14,8 +14,8 @@ if (!defined('SYNTAX_API')) {
 /** Version of the SMS consent wording shown on the website (components/forms/SmsConsent.tsx). */
 const SMS_CONSENT_VERSION = '2026-10-23';
 const SMS_CONSENT_TEXT = [
-    'transactional' => 'Text me about this quote request and my project (scheduling, delivery and account updates) from Syntax Estimation. Message frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help.',
-    'marketing'     => 'Send me occasional marketing texts (estimating tips and offers) from Syntax Estimation. Consent is not a condition of purchase. Msg & data rates may apply. Reply STOP to opt out.',
+    'transactional' => 'Text me about this quote request and my project (scheduling, delivery and account updates) from Arvex Designs. Message frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help.',
+    'marketing'     => 'Send me occasional marketing texts (estimating tips and offers) from Arvex Designs. Consent is not a condition of purchase. Msg & data rates may apply. Reply STOP to opt out.',
 ];
 
 const US_STATES = [

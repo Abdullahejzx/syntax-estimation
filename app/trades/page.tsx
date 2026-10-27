@@ -18,6 +18,7 @@ export default function TradesPage() {
   return (
     <>
       <PageHero
+        image="bg-trades"
         breadcrumbs={[{ label: "Trades", href: "/trades/" }]}
         tag={hub.hero.tag}
         tagTone="accent"

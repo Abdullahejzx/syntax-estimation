@@ -4,6 +4,7 @@ import { audiences } from "@/content/home";
 import { specialtyTrades, tradeHref } from "@/content/trades";
 import { cn } from "@/lib/cn";
 import { Reveal } from "@/components/motion/Reveal";
+import { CardPhoto } from "@/components/ui/CardPhoto";
 import { CheckList } from "@/components/ui/CheckList";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
@@ -34,20 +35,22 @@ export function Audiences({
             <Reveal key={a.title} delay={i * 0.08}>
               <article
                 className={cn(
-                  "card-lift flex h-full flex-col rounded-xl border bg-white p-6 sm:p-8",
+                  "card-lift group flex h-full flex-col overflow-hidden rounded-xl border bg-white",
                   a.featured ? "border-accent/40 shadow-lift" : "border-line shadow-card",
                 )}
               >
-                <div className="mb-4 flex items-center justify-between">
-                  <span
-                    className={cn(
-                      "rounded px-2.5 py-1 text-caption font-semibold uppercase",
-                      a.featured ? "bg-accent-100 text-accent-ink" : "bg-blue-50 text-navy",
-                    )}
-                  >
-                    {a.tag}
-                  </span>
-                  <a.icon aria-hidden="true" className={cn("size-6", a.featured ? "text-accent-ink" : "text-blueprint-ink")} />
+                <CardPhoto image={a.image} ratio="aspect-[16/8]" />
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
+                  <div className="mb-4 flex items-center justify-between">
+                    <span
+                      className={cn(
+                        "rounded px-2.5 py-1 text-caption font-semibold uppercase",
+                        a.featured ? "bg-accent-100 text-accent-ink" : "bg-blue-50 text-navy",
+                      )}
+                    >
+                      {a.tag}
+                    </span>
+                    <a.icon aria-hidden="true" className={cn("size-6", a.featured ? "text-accent-ink" : "text-blueprint-ink")} />
                 </div>
                 <h3 className="text-headline-md font-bold">{a.title}</h3>
                 <p className="mt-1 mb-4 text-caption font-semibold text-accent-ink">{a.subtitle}</p>
@@ -78,6 +81,7 @@ export function Audiences({
                     {a.featured ? "Browse all trades" : `Estimating for ${a.title.toLowerCase()}`}
                     <ArrowRight aria-hidden="true" className="size-4" />
                   </Link>
+                </div>
                 </div>
               </article>
             </Reveal>

@@ -102,7 +102,7 @@ export const insulation: Trade = {
     ],
   },
   why: {
-    title: "Why Insulation Contractors Choose Syntax",
+    title: "Why Insulation Contractors Choose Arvex",
     points: [
       { title: "Every assembly covered", text: "Walls, roofs, floors, slab edges and rim joists are measured from sections and details." },
       { title: "Right R-value, right place", text: "Areas follow the assembly that calls for them instead of being averaged across the building." },
