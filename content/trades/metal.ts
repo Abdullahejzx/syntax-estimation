@@ -104,7 +104,7 @@ export const metal: Trade = {
     ],
   },
   why: {
-    title: "Why Metals Contractors Choose Arvex",
+    title: "Why Metals Contractors Choose Bidnora",
     points: [
       { title: "Weights you can check", text: "Every member shows shape, length and weight per foot, so totals are easy to audit." },
       { title: "Misc. metals don't slip through", text: "Lintels, embeds, ladders and bollards are pulled from both architectural and structural sheets." },

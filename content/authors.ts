@@ -7,15 +7,15 @@ export type Author = { name: string; role: string; bio: string; linkedin?: strin
 export const authors: Record<string, Author> = {
   "Daniel Brooks": {
     name: "Daniel Brooks",
-    role: "Founder & Chief Estimator, Arvex Designs",
-    bio: "Daniel has spent 16 years in preconstruction on commercial, structural concrete and healthcare projects, first as a GC estimator and later as a preconstruction director. He leads Arvex Designs's estimating standards.",
+    role: "Founder & Chief Estimator, Bidnora Engineering",
+    bio: "Daniel has spent 16 years in preconstruction on commercial, structural concrete and healthcare projects, first as a GC estimator and later as a preconstruction director. He leads Bidnora Engineering's estimating standards.",
   },
-  "Arvex Designs Team": {
-    name: "Arvex Designs Team",
+  "Bidnora Engineering Team": {
+    name: "Bidnora Engineering Team",
     role: "Estimators & detailers",
-    bio: "Articles written and reviewed by the estimators and detailers at Arvex Designs in Newark, New Jersey.",
+    bio: "Articles written and reviewed by the estimators and detailers at Bidnora Engineering in Newark, New Jersey.",
   },
 };
 
 export const getAuthor = (name: string): Author =>
-  authors[name] ?? { name, role: "Arvex Designs", bio: "" };
+  authors[name] ?? { name, role: "Bidnora Engineering", bio: "" };

@@ -73,7 +73,7 @@ export function SiteHeader() {
       )}
       onMouseLeave={scheduleClose}
     >
-      <Container className="flex h-16 items-center justify-between gap-6 lg:h-20">
+      <Container className="flex h-16 items-center justify-between gap-4 lg:h-20 xl:gap-6">
         <Logo />
 
         <nav aria-label="Main" className="hidden lg:block">
@@ -81,7 +81,7 @@ export function SiteHeader() {
             {mainNav.map((item) => {
               const active = isActive(pathname, item.href);
               const linkClass = cn(
-                "relative inline-flex h-10 items-center rounded-md px-2.5 text-[0.9375rem] font-medium transition-colors hover:text-navy",
+                "relative inline-flex h-10 items-center rounded-md px-2 text-[0.875rem] font-medium whitespace-nowrap transition-colors hover:text-navy xl:px-2.5 xl:text-[0.9375rem]",
                 active ? "text-navy" : "text-body",
               );
               if (!item.menu) {

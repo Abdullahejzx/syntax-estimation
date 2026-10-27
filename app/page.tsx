@@ -49,7 +49,7 @@ export default function HomePage() {
       <Pricing />
       <FeatureGrid
         id="why-us"
-        eyebrow="Why Arvex Designs"
+        eyebrow="Why Bidnora Engineering"
         title="Engineered for Bid Accuracy & Speed"
         intro="Why contractors across the country hand their takeoffs to our team."
         items={features}

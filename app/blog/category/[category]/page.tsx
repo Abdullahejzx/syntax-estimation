@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!cat) return {};
   return pageMetadata({
     title: `${cat.name} Articles & Guides`,
-    description: `${cat.name} guides, checklists and tips for contractors from the estimators at Arvex Designs.`,
+    description: `${cat.name} guides, checklists and tips for contractors from the estimators at Bidnora Engineering.`,
     path: categoryHref(slug),
   });
 }

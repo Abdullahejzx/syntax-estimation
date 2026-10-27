@@ -5,7 +5,7 @@ import { BlogIndex } from "@/components/blog/BlogIndex";
 export const metadata = pageMetadata({
   title: "Construction Estimating Blog: Takeoff & Bidding Guides",
   description:
-    "Construction cost guides, quantity takeoff checklists and bidding strategies for subcontractors and general contractors, from the estimators at Arvex Designs.",
+    "Construction cost guides, quantity takeoff checklists and bidding strategies for subcontractors and general contractors, from the estimators at Bidnora Engineering.",
   path: "/blog/",
 });
 

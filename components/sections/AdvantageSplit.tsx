@@ -20,7 +20,7 @@ type AdvantageSplitProps = {
 
 /** Benefits list on the left, a single client quote (and optional tip) on the right. */
 export function AdvantageSplit({
-  eyebrow = "Why Arvex",
+  eyebrow = "Why Bidnora",
   title,
   intro,
   points,

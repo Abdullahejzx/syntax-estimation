@@ -21,14 +21,14 @@ return [
 
     // "From" address on every email (normally the same mailbox as the SMTP username)
     'from_email' => 'info@arvexdesigns.net',
-    'from_name'  => 'Arvex Designs',
+    'from_name'  => 'Bidnora Engineering',
 
     // Who receives new quote requests (one or more addresses)
     'notify_to' => ['info@arvexdesigns.net'],
 
     // Shown in the confirmation email sent to the visitor
     'company' => [
-        'name'    => 'Arvex Designs',
+        'name'    => 'Bidnora Engineering',
         'phone'   => '(201) 555-0148',
         'email'   => 'info@arvexdesigns.net',
         'website' => 'https://www.arvexdesigns.net',
@@ -39,7 +39,7 @@ return [
 
     // Where uploaded plans are stored. The default is OUTSIDE public_html (one level up),
     // so files can never be opened directly from the web. Must be writable by PHP.
-    'upload_dir' => dirname(__DIR__, 2) . '/arvex-uploads',
+    'upload_dir' => dirname(__DIR__, 2) . '/bidnora-uploads',
 
     // Secret used to sign download links. Use 64+ random characters, e.g. from
     // https://www.random.org/strings/ or `openssl rand -hex 32`. Changing it breaks old links.

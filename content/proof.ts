@@ -30,7 +30,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "We use Arvex for overflow when we're bidding several jobs at once. Their numbers line up with the sub bids we get back, which is exactly what we need.",
+      "We use Bidnora for overflow when we're bidding several jobs at once. Their numbers line up with the sub bids we get back, which is exactly what we need.",
     name: "Sarah J.",
     role: "Chief Estimator, general contractor",
     location: "Denver, CO",

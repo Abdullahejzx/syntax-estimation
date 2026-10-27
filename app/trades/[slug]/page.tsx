@@ -81,7 +81,7 @@ export default async function TradePage({ params }: Props) {
       {trade.pricing && <PricingPillars data={trade.pricing} tradeName={label} />}
       <WorkflowCards data={trade.workflows} />
       <AdvantageSplit
-        eyebrow="Why Arvex"
+        eyebrow="Why Bidnora"
         numbered
         title={trade.why.title}
         points={trade.why.points}

@@ -102,7 +102,7 @@ export const plumbing: Trade = {
     ],
   },
   why: {
-    title: "Why Plumbing Contractors Choose Arvex",
+    title: "Why Plumbing Contractors Choose Bidnora",
     points: [
       { title: "Organized by system", text: "Domestic, sanitary, vent, storm and gas are kept separate, the way you price them." },
       { title: "Fixtures from the schedule", text: "Every fixture tag is counted and checked against the schedule." },

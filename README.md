@@ -1,6 +1,6 @@
-# Arvex Designs website
+# Bidnora Engineering website
 
-Marketing site for Arvex Designs, a construction cost estimating company based in New Jersey that serves contractors in all 50 states.
+Marketing site for Bidnora Engineering, a construction cost estimating company based in New Jersey that serves contractors in all 50 states.
 
 Built with Next.js (App Router, static export), TypeScript, Tailwind CSS v4 and Framer Motion. `npm run build` produces plain HTML, CSS and JavaScript in `out/`, which runs on Hostinger shared hosting with no Node server. Every form posts to a small PHP script that ships in the same folder.
 
@@ -154,7 +154,7 @@ The forms (quote wizard, quick quote, sample request, newsletter) post to `/api/
 4. **Check deliverability.** In hPanel under **Emails > Domain settings** (or the DNS zone), make sure SPF, DKIM and DMARC are set up so the emails don't land in spam.
 5. **Test.** Submit each form on the live site. If something fails, temporarily set `'debug' => true` in `config.php` to see the technical error in the form response, then set it back to `false`.
 
-Uploaded plans are stored in `arvex-uploads/`, one level above `public_html`, so they can never be opened directly. The PHP limits for 100 MB uploads are in `public/api/.user.ini`. If large uploads still fail, set the same values in hPanel under **Advanced > PHP Configuration**.
+Uploaded plans are stored in `bidnora-uploads/`, one level above `public_html`, so they can never be opened directly. The PHP limits for 100 MB uploads are in `public/api/.user.ini`. If large uploads still fail, set the same values in hPanel under **Advanced > PHP Configuration**.
 
 ## Deploy to Hostinger
 

@@ -13,8 +13,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 export const isPreview = process.env.NEXT_PUBLIC_PREVIEW === "true";
 
 export const siteConfig = {
-  name: "Arvex Designs",
-  legalName: "Arvex Designs LLC", // TODO: confirm registered business name
+  name: "Bidnora Engineering",
+  legalName: "Bidnora Engineering LLC", // TODO: confirm registered business name
   tagline: "Construction cost estimating and quantity takeoffs for contractors in all 50 states.",
   /** Where the site is served from (the preview's GitHub Pages address, or the real domain) */
   url: process.env.NEXT_PUBLIC_SITE_URL || productionUrl,
