@@ -1,6 +1,6 @@
 # Bidnora Engineering website
 
-Marketing site for Bidnora Engineering, a construction cost estimating company based in New Jersey that serves contractors in all 50 states.
+Marketing site for Bidnora Engineering, a construction cost estimating company based in Las Vegas, Nevada, that serves contractors in all 50 states.
 
 Built with Next.js (App Router, static export), TypeScript, Tailwind CSS v4 and Framer Motion. `npm run build` produces plain HTML, CSS and JavaScript in `out/`, which runs on Hostinger shared hosting with no Node server. Every form posts to a small PHP script that ships in the same folder.
 
@@ -141,7 +141,7 @@ After launch, you can check how a link will look with LinkedIn's [Post Inspector
 
 The forms (quote wizard, quick quote, sample request, newsletter) post to `/api/quote.php`. That script emails the team a summary with secure download links for uploaded plans, and sends the visitor a confirmation. It sends mail through PHPMailer over SMTP.
 
-1. **Create the mailbox.** In Hostinger hPanel, go to **Emails** and create the address that will send mail, for example `info@arvexdesigns.net`. Under that mailbox's **Configuration** (or "Connect apps & devices"), note the SMTP host, port and encryption. For Hostinger these are usually `smtp.hostinger.com`, port `465`, SSL.
+1. **Create the mailbox.** In Hostinger hPanel, go to **Emails** and create the address that will send mail, for example `info@bidnoraengineering.com`. Under that mailbox's **Configuration** (or "Connect apps & devices"), note the SMTP host, port and encryption. For Hostinger these are usually `smtp.hostinger.com`, port `465`, SSL.
 2. **Create `config.php`.** Copy `public/api/config.example.php` to `config.php` and fill in:
    - `smtp.username` and `smtp.password`: the mailbox login.
    - `from_email` and `from_name`: normally the same mailbox.
@@ -188,7 +188,7 @@ Uploaded plans are stored in `bidnora-uploads/`, one level above `public_html`, 
 
 ## After launch: SEO and performance
 
-- **Google Search Console:** add the domain, verify it (DNS record in hPanel) and submit `https://www.arvexdesigns.net/sitemap.xml`. Bing Webmaster Tools can import the same settings.
+- **Google Search Console:** add the domain, verify it (DNS record in hPanel) and submit `https://www.bidnoraengineering.com/sitemap.xml`. Bing Webmaster Tools can import the same settings.
 - **Google Business Profile:** use exactly the same name, address and phone as `config/site.ts`.
 - **Structured data:** check a few pages in Google's [Rich Results Test](https://search.google.com/test/rich-results). The site includes LocalBusiness, Service, FAQPage, BlogPosting and BreadcrumbList schema.
 - **Performance:** measure the live site with [PageSpeed Insights](https://pagespeed.web.dev/). Lighthouse on a slow or busy laptop under-reports mobile scores (it says so in a warning at the top of the report), so trust PageSpeed's numbers. What's already in place:

@@ -9,11 +9,11 @@ To find any that are left: search the project for `TODO`.
 These appear in the header, footer, mobile call bar, contact page, map, legal pages and Google schema.
 
 - [ ] Legal business name (currently "Bidnora Engineering LLC")
-- [ ] Production domain (currently `https://www.arvexdesigns.net`). If it changes, also update `public/.htaccess` (www redirect) and `base_url` / `allowed_origins` in `public/api/config.php`.
-- [ ] Phone number (dummy: `(201) 555-0148`) and its `phoneHref`
-- [ ] Email address (`info@arvexdesigns.net` is assumed from the new domain; confirm the real mailbox)
-- [ ] Office address (dummy: 100 Example Street, Suite 200, Newark, NJ 07102). It drives the map on the contact page.
-- [ ] Business hours (`hours`, `hoursDetail`) and the matching `openingHours` for Google
+- [x] Production domain: `https://www.bidnoraengineering.com` (taken from the client's email address). If it changes, also update `public/.htaccess` (www redirect) and `base_url` / `allowed_origins` in `public/api/config.php`.
+- [x] Phone number: (916) 545-5689
+- [x] Email address: info@bidnoraengineering.com
+- [x] Office address: 304 S. Jones Blvd, Las Vegas, NV 89107
+- [ ] Business hours (`hours`, `hoursDetail`) and the matching `openingHours` for Google. Currently Mon–Fri 8:00 AM – 6:00 PM PT, an assumption based on the Las Vegas office.
 - [ ] LinkedIn, Facebook and YouTube profile URLs (the client will share them; currently the bare sites). Set unused ones to `""`.
 
 ## 2. Email backend: `public/api/config.php` (on the server only)

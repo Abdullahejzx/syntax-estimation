@@ -7,7 +7,7 @@ export const quotePage = {
   seo: {
     title: "Get a Free Construction Estimate Quote",
     description:
-      "Upload your plans for a free, fixed-price quote on construction cost estimating, quantity takeoffs, drafting or detailing. Contact Bidnora Engineering in Newark, NJ.",
+      "Upload your plans for a free, fixed-price quote on construction cost estimating, quantity takeoffs, drafting or detailing. Contact Bidnora Engineering in Las Vegas, NV.",
   },
   hero: {
     tag: "Estimating desk open",

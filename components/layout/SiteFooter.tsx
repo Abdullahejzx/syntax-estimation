@@ -74,7 +74,7 @@ export function SiteFooter() {
             </ul>
             <p className="inline-flex w-fit items-center gap-1.5 rounded border border-white/15 bg-navy-800 px-2.5 py-1.5 text-caption">
               <BadgeCheck aria-hidden="true" className="size-4 text-accent" />
-              Based in New Jersey · Serving all 50 states
+              Based in Las Vegas, Nevada · Serving all 50 states
             </p>
           </div>
 

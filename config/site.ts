@@ -4,8 +4,7 @@
  * The quote form's email recipients live separately in public/api/config.php.
  */
 
-// TODO: confirm production domain
-export const productionUrl = "https://www.arvexdesigns.net";
+export const productionUrl = "https://www.bidnoraengineering.com";
 
 // Set only by the GitHub Pages preview build (.github/workflows/preview.yml). The normal
 // Hostinger build leaves them empty: site at the domain root, forms switched on.
@@ -21,20 +20,19 @@ export const siteConfig = {
   /** URL prefix when the site lives in a subfolder (e.g. "/syntax-estimation"), otherwise "" */
   basePath,
 
-  // TODO: replace dummy contact details with real ones
-  phone: "(201) 555-0148",
-  phoneHref: "tel:+12015550148",
-  email: "info@arvexdesigns.net",
+  phone: "(916) 545-5689",
+  phoneHref: "tel:+19165455689",
+  email: "info@bidnoraengineering.com",
   address: {
-    street: "100 Example Street, Suite 200",
-    city: "Newark",
-    region: "NJ",
-    postalCode: "07102",
+    street: "304 S. Jones Blvd",
+    city: "Las Vegas",
+    region: "NV",
+    postalCode: "89107",
     country: "US",
   },
   hours: "Mon–Fri, all US time zones",
   // TODO: confirm business hours
-  hoursDetail: ["Mon–Fri: 8:00 AM – 6:00 PM ET", "Sat–Sun: Closed"],
+  hoursDetail: ["Mon–Fri: 8:00 AM – 6:00 PM PT", "Sat–Sun: Closed"],
   // Machine-readable hours for schema.org (TODO: confirm)
   openingHours: ["Mo-Fr 08:00-18:00"],
 

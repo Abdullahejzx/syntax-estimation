@@ -44,7 +44,7 @@ export function Hero() {
     >
       <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-caption font-semibold uppercase text-white backdrop-blur-sm">
         <span aria-hidden="true" className="size-2 rounded-full bg-accent" />
-        New Jersey based · Estimating for all 50 states
+        Las Vegas based · Estimating for all 50 states
       </p>
 
       <h1 id="hero-title" className="text-display-mobile font-extrabold text-white sm:text-headline-xl lg:text-display">

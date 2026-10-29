@@ -13,7 +13,7 @@ export const authors: Record<string, Author> = {
   "Bidnora Engineering Team": {
     name: "Bidnora Engineering Team",
     role: "Estimators & detailers",
-    bio: "Articles written and reviewed by the estimators and detailers at Bidnora Engineering in Newark, New Jersey.",
+    bio: "Articles written and reviewed by the estimators and detailers at Bidnora Engineering in Las Vegas, Nevada.",
   },
 };
 

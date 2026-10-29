@@ -89,7 +89,7 @@ export function ContactCards() {
   const cards = [
     { icon: Phone, title: "Call us", sub: "Talk to an estimator", value: siteConfig.phone, href: siteConfig.phoneHref },
     { icon: AtSign, title: "Email us", sub: "We reply within one business day", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
-    { icon: MapPin, title: "Visit our office", sub: "New Jersey headquarters", value: fullAddress },
+    { icon: MapPin, title: "Visit our office", sub: "Las Vegas, Nevada headquarters", value: fullAddress },
     { icon: Clock, title: "Business hours", sub: "Serving all US time zones", lines: siteConfig.hoursDetail },
   ];
   return (

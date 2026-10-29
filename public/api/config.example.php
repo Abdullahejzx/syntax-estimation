@@ -15,27 +15,27 @@ return [
         'host'     => 'smtp.hostinger.com',
         'port'     => 465,          // 465 with 'ssl', or 587 with 'tls'
         'secure'   => 'ssl',        // 'ssl' or 'tls'
-        'username' => 'info@arvexdesigns.net',
+        'username' => 'info@bidnoraengineering.com',
         'password' => 'CHANGE_ME',
     ],
 
     // "From" address on every email (normally the same mailbox as the SMTP username)
-    'from_email' => 'info@arvexdesigns.net',
+    'from_email' => 'info@bidnoraengineering.com',
     'from_name'  => 'Bidnora Engineering',
 
     // Who receives new quote requests (one or more addresses)
-    'notify_to' => ['info@arvexdesigns.net'],
+    'notify_to' => ['info@bidnoraengineering.com'],
 
     // Shown in the confirmation email sent to the visitor
     'company' => [
         'name'    => 'Bidnora Engineering',
-        'phone'   => '(201) 555-0148',
-        'email'   => 'info@arvexdesigns.net',
-        'website' => 'https://www.arvexdesigns.net',
+        'phone'   => '(916) 545-5689',
+        'email'   => 'info@bidnoraengineering.com',
+        'website' => 'https://www.bidnoraengineering.com',
     ],
 
     // Public site address, used to build file download links (no trailing slash)
-    'base_url' => 'https://www.arvexdesigns.net',
+    'base_url' => 'https://www.bidnoraengineering.com',
 
     // Where uploaded plans are stored. The default is OUTSIDE public_html (one level up),
     // so files can never be opened directly from the web. Must be writable by PHP.
@@ -62,8 +62,8 @@ return [
 
     // Only accept submissions from these origins (leave empty to skip the check)
     'allowed_origins' => [
-        'https://www.arvexdesigns.net',
-        'https://arvexdesigns.net',
+        'https://www.bidnoraengineering.com',
+        'https://bidnoraengineering.com',
     ],
 
     // Optional: absolute path to a sample estimate PDF attached to sample-request confirmations

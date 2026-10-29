@@ -7,7 +7,7 @@ import { IconTile } from "@/components/ui/IconTile";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow, SectionHeading } from "@/components/ui/SectionHeading";
 
-/** Hero visual: a drawing sheet, a takeoff line card and a "Based in New Jersey" badge, stacked. */
+/** Hero visual: a drawing sheet, a takeoff line card and a "Based in Las Vegas" badge, stacked. */
 export function AboutVisual() {
   return (
     <div aria-hidden="true" className="relative mx-auto max-w-md pb-10 lg:max-w-none">
@@ -46,7 +46,7 @@ export function AboutVisual() {
             <span>18,450 SF</span>
           </li>
           <li className="flex justify-between px-2.5 py-1.5 text-body">
-            <span>Local rate, NJ ZIP 071</span>
+            <span>Local rate, NV ZIP 891</span>
             <span className="font-semibold text-navy">$7.42 / SF</span>
           </li>
           <li className="flex justify-between rounded bg-mist px-2.5 py-1.5 font-semibold text-navy">
@@ -61,7 +61,7 @@ export function AboutVisual() {
           <MapPin className="size-5 text-accent" />
         </span>
         <span>
-          <span className="block font-display text-[0.9375rem] font-bold">Based in New Jersey</span>
+          <span className="block font-display text-[0.9375rem] font-bold">Based in Las Vegas, Nevada</span>
           <span className="block text-caption text-navy-200">Serving contractors in all 50 states</span>
         </span>
       </div>
@@ -272,12 +272,13 @@ export function ToolsSection() {
 // Approximate positions (percent of the map box) for the coverage graphic
 const mapPins = [
   { label: "SEA", x: 12, y: 14 },
-  { label: "LA", x: 10, y: 62 },
+  { label: "NYC", x: 88, y: 30 },
   { label: "DFW", x: 46, y: 74 },
   { label: "CHI", x: 62, y: 30 },
   { label: "ATL", x: 72, y: 66 },
 ];
-const hq = { x: 88, y: 32 };
+// Las Vegas, NV
+const hq = { x: 20, y: 54 };
 
 export function CoverageSection() {
   const { coverage } = about;
@@ -335,7 +336,7 @@ export function CoverageSection() {
                 ))}
                 <span className="absolute -translate-x-1/2 -translate-y-1/2" style={{ left: `${hq.x}%`, top: `${hq.y}%` }}>
                   <span className="block size-3.5 rounded-full border-[3px] border-accent bg-white" />
-                  <span className="absolute top-4 right-0 rounded bg-navy px-1.5 py-0.5 text-[0.625rem] font-bold whitespace-nowrap text-white">NJ HQ</span>
+                  <span className="absolute top-4 left-0 rounded bg-navy px-1.5 py-0.5 text-[0.625rem] font-bold whitespace-nowrap text-white">Las Vegas HQ</span>
                 </span>
               </div>
               <div className="mt-4 flex flex-wrap justify-between gap-2 text-caption font-medium text-navy">

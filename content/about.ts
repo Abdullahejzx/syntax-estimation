@@ -24,14 +24,14 @@ export const about = {
   seo: {
     title: "About Bidnora Engineering",
     description:
-      "Bidnora Engineering is a New Jersey construction estimating firm founded in 2026 by estimators with 60+ years of combined field and preconstruction experience.",
+      "Bidnora Engineering is a Las Vegas, Nevada construction estimating firm founded in 2026 by estimators with 60+ years of combined field and preconstruction experience.",
   },
   hero: {
     tag: "About Bidnora Engineering",
     titleStart: "Estimators Who Think",
     titleEnd: "Like Contractors",
     intro:
-      "A New Jersey estimating firm founded in 2026 by estimators with 60+ years of combined field and preconstruction experience.",
+      "A Las Vegas estimating firm founded in 2026 by estimators with 60+ years of combined field and preconstruction experience.",
     // TODO: confirm turnaround claim
     badges: ["Turnaround: 24–72 hrs", "Local pricing by ZIP code", "All 50 states"],
   },
@@ -60,10 +60,10 @@ export const about = {
   timeline: {
     eyebrow: "2026 at a glance",
     title: "Building Momentum, Trade by Trade",
-    intro: "From a New Jersey office to takeoffs delivered coast to coast in our first year.",
+    intro: "From a Las Vegas office to takeoffs delivered coast to coast in our first year.",
     // TODO: placeholder milestones. Replace with real dates and figures.
     items: [
-      { badge: "Q1", label: "Founded", title: "Founded in New Jersey", text: "Started by senior estimators with 60+ combined years in construction and preconstruction.", foot: "Office in Newark, NJ" },
+      { badge: "Q1", label: "Founded", title: "Founded in Las Vegas", text: "Started by senior estimators with 60+ combined years in construction and preconstruction.", foot: "Office in Las Vegas, NV" },
       { badge: "Q2", label: "First projects", title: "First 50 Projects Delivered", text: "Commercial and trade takeoffs delivered for contractors across multiple states.", foot: "Repeat clients from day one" },
       { badge: "Q3", label: "New capability", title: "Drafting & Detailing Team", text: "Added CAD drafters and rebar and steel detailers to support shop drawing work.", foot: "Shop drawings & BIM" },
       { badge: "Now", label: "Today", title: "120+ Projects Estimated", text: "Contractor clients across the country, with work in every CSI division.", foot: "Nationwide coverage" },
@@ -80,7 +80,7 @@ export const about = {
       { icon: Handshake, title: "Partnership", text: "We work as an extension of your preconstruction team, from the first question to bid day." },
     ] as { icon: LucideIcon; title: string; text: string }[],
   },
-  statsNote: "Based in New Jersey · Serving commercial, residential and civil contractors nationwide.",
+  statsNote: "Based in Las Vegas, Nevada · Serving commercial, residential and civil contractors nationwide.",
   team: {
     eyebrow: "Meet the team",
     title: "The Preconstruction Experts Behind Every Bid",
@@ -121,7 +121,7 @@ export const about = {
     eyebrow: "Nationwide coverage",
     title: "Local Pricing for Projects Nationwide",
     intro:
-      "Based in New Jersey, with labor and material pricing adjusted for the county and ZIP code of every project in the United States.",
+      "Based in Las Vegas, Nevada, with labor and material pricing adjusted for the county and ZIP code of every project in the United States.",
     // TODO: confirm the markets you want to highlight
     markets: [
       { city: "New York Metro", note: "Home region" },
@@ -136,6 +136,6 @@ export const about = {
   cta: {
     eyebrow: "Ready for your next bid",
     title: "Let's Estimate Your Next Project Together",
-    text: "Send us your drawings and our estimators in New Jersey will review your scope and reply with a fixed quote.",
+    text: "Send us your drawings and our estimators in Las Vegas will review your scope and reply with a fixed quote.",
   },
 };
